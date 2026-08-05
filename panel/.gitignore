@@ -1,0 +1,13 @@
+config.json
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+logs/*.log
+*.egg-info/
+dist/
+build/
+.idea/
+.vscode/

@@ -1,0 +1,27 @@
+{
+  "paths": {
+    "restarter_script": "/home/aizen/Server/Restarter/wow-restarter.sh",
+    "server_root": "/home/aizen/Server/OrstetCore/env/dist",
+    "auth_bin": "/home/aizen/Server/OrstetCore/env/dist/bin/authserver",
+    "world_bin": "/home/aizen/Server/OrstetCore/env/dist/bin/worldserver",
+    "auth_conf": "/home/aizen/Server/OrstetCore/env/dist/etc/authserver.conf",
+    "world_conf": "/home/aizen/Server/OrstetCore/env/dist/etc/worldserver.conf"
+  },
+  "telegram": {
+    "bot_token": "",
+    "owner_id": 0
+  },
+  "mysql": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "acore",
+    "password": "acore",
+    "database": "acore_characters"
+  },
+  "soap": {
+    "host": "127.0.0.1",
+    "port": 7878,
+    "username": "",
+    "password": ""
+  }
+}

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=WoW Server Panel
+Comment=Панель управления OrstetCore / AzerothCore + Telegram-бот
+Exec=/home/aizen/Server/Restarter/panel/run-panel.sh
+Path=/home/aizen/Server/Restarter/panel
+Icon=/home/aizen/Server/Restarter/panel/assets/wow-panel.png
+Terminal=false
+Categories=Utility;
+StartupNotify=true
+StartupWMClass=WoW Server Panel
+

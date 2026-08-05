@@ -1,0 +1,93 @@
+[2026-07-16 08:50:22] authserver запущен (pid 1504076), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-16 08:57:58] authserver запущен (pid 1509162), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-16 08:57:59] worldserver запущен (pid 1509189), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-16 08:58:31] authserver запущен (pid 1509571), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-16 08:58:32] worldserver запущен (pid 1509596), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-16 08:59:51] authserver запущен (pid 1510386), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-16 08:59:52] worldserver запущен (pid 1510425), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-16 09:00:39] worldserver не запущен
+[2026-07-16 09:00:39] authserver не запущен
+[2026-07-16 09:01:07] authserver запущен (pid 1511477), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-16 09:01:08] worldserver запущен (pid 1511503), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-16 09:01:55] authserver уже запущен (pid 1511477)
+[2026-07-16 09:01:55] worldserver уже запущен (pid 1511503)
+[2026-07-16 09:04:51] authserver уже работал вне рестартера (pid 1511477) — подхватил
+[2026-07-16 09:04:51] worldserver уже работал вне рестартера (pid 1511503) — подхватил
+[2026-07-17 16:49:54] authserver запущен (pid 45731), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-17 16:49:56] worldserver запущен (pid 45757), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-17 17:24:16] authserver уже запущен (pid 45731)
+[2026-07-17 17:24:16] worldserver уже запущен (pid 45757)
+[2026-07-17 22:52:46] authserver запущен (pid 102510), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-17 22:52:47] worldserver запущен (pid 102537), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-17 23:14:27] authserver запущен (pid 4750), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-17 23:14:28] worldserver запущен (pid 4780), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-17 23:33:51] authserver запущен (pid 10001), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-17 23:33:52] worldserver запущен (pid 10027), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-18 11:22:10] authserver запущен (pid 7946), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-18 11:22:11] worldserver запущен (pid 7975), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-18 18:39:21] authserver запущен (pid 73455), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-18 18:39:22] worldserver запущен (pid 73482), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-25 15:09:33] authserver запущен (pid 16115), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-25 15:09:34] worldserver запущен (pid 16148), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-25 15:10:14] worldserver не запущен
+[2026-07-25 15:10:14] Останавливаю authserver (pid 16115)...
+[2026-07-25 15:10:15] authserver остановлен
+[2026-07-25 15:10:18] authserver запущен (pid 16856), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-25 15:10:26] worldserver не стартовал за 8с
+[2026-07-25 15:10:48] authserver уже запущен (pid 16856)
+[2026-07-25 15:10:56] worldserver не стартовал за 8с
+[2026-07-25 15:14:24] worldserver не запущен
+[2026-07-25 15:14:24] Останавливаю authserver (pid 16856)...
+[2026-07-25 15:14:25] authserver остановлен
+[2026-07-25 15:14:31] authserver запущен (pid 19244), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-25 15:14:32] worldserver запущен (pid 19292), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-25 15:21:49] Останавливаю worldserver (pid 19292)...
+[2026-07-25 15:22:19] worldserver не завершился за 30с — SIGKILL
+[2026-07-25 15:22:19] worldserver остановлен
+[2026-07-25 15:22:19] Останавливаю authserver (pid 19244)...
+[2026-07-25 15:22:20] authserver остановлен
+[2026-07-25 15:32:24] authserver запущен (pid 31189), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-25 15:32:25] worldserver запущен (pid 31215), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-26 10:23:13] Останавливаю worldserver (pid 31215)...
+[2026-07-26 10:23:17] worldserver остановлен
+[2026-07-26 10:23:17] Останавливаю authserver (pid 31189)...
+[2026-07-26 10:23:18] authserver остановлен
+[2026-07-26 10:25:17] authserver запущен (pid 651452), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-26 10:25:19] worldserver запущен (pid 651494), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-26 10:26:26] Останавливаю worldserver (pid 651494)...
+[2026-07-26 10:26:30] worldserver остановлен
+[2026-07-26 10:26:30] Останавливаю authserver (pid 651452)...
+[2026-07-26 10:26:31] authserver остановлен
+[2026-07-26 10:42:30] authserver запущен (pid 664721), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-26 10:42:31] worldserver запущен (pid 664747), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-26 13:21:45] Останавливаю worldserver (pid 664747)...
+[2026-07-26 13:21:53] worldserver остановлен
+[2026-07-26 13:21:53] Останавливаю authserver (pid 664721)...
+[2026-07-26 13:21:54] authserver остановлен
+[2026-07-26 14:53:17] authserver запущен (pid 904286), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-26 14:53:18] worldserver запущен (pid 904313), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-26 14:57:38] authserver уже запущен (pid 904286)
+[2026-07-26 14:57:39] worldserver запущен (pid 906896), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-26 17:42:14] Останавливаю worldserver (pid 906896)...
+[2026-07-26 17:42:19] worldserver остановлен
+[2026-07-26 17:42:19] Останавливаю authserver (pid 904286)...
+[2026-07-26 17:42:20] authserver остановлен
+[2026-07-26 19:37:04] authserver запущен (pid 1185621), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-26 19:37:05] worldserver запущен (pid 1185648), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-26 19:46:43] Останавливаю worldserver (pid 1185648)...
+[2026-07-26 19:46:46] worldserver остановлен
+[2026-07-26 19:46:46] Останавливаю authserver (pid 1185621)...
+[2026-07-26 19:46:47] authserver остановлен
+[2026-07-26 19:46:50] authserver запущен (pid 1195313), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-26 19:46:51] worldserver запущен (pid 1195346), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-26 21:35:33] Останавливаю worldserver (pid 1195346)...
+[2026-07-26 21:35:35] worldserver остановлен
+[2026-07-26 21:35:35] Останавливаю authserver (pid 1195313)...
+[2026-07-26 21:35:36] authserver остановлен
+[2026-07-27 10:43:13] authserver запущен (pid 1800542), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-27 10:43:14] worldserver запущен (pid 1800570), лог: /home/aizen/Server/Restarter/logs/worldserver.out
+[2026-07-27 10:46:53] worldserver не запущен
+[2026-07-27 10:46:53] Останавливаю authserver (pid 1800542)...
+[2026-07-27 10:46:54] authserver остановлен
+[2026-07-27 10:46:57] authserver запущен (pid 1805592), лог: /home/aizen/Server/Restarter/logs/authserver.out
+[2026-07-27 10:46:58] worldserver запущен (pid 1805615), лог: /home/aizen/Server/Restarter/logs/worldserver.out

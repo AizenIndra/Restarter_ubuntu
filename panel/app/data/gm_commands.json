@@ -1,0 +1,4208 @@
+[
+  {
+    "name": "account addon",
+    "security": 1,
+    "syntax": ".account addon #addon",
+    "description": "Set expansion addon level allowed. Addon values: 0 - normal, 1 - tbc, 2 - wotlk."
+  },
+  {
+    "name": "account 2fa",
+    "security": 0,
+    "syntax": ".account 2fa",
+    "description": "Type .account 2fa to see the list of possible subcommands or .help account 2fa $subcommand to see info on subcommands."
+  },
+  {
+    "name": "account 2fa setup",
+    "security": 0,
+    "syntax": ".account 2fa setup",
+    "description": "Setup 2fa authentication. Use .account 2fa setup 1 to receive token. Apply token to authenticator app (case sensitive). Use the pin from app with .account 2fa setup PIN to confirm setup."
+  },
+  {
+    "name": "account 2fa remove",
+    "security": 0,
+    "syntax": ".account 2fa remove",
+    "description": "Remove 2fa authentication."
+  },
+  {
+    "name": "account create",
+    "security": 4,
+    "syntax": ".account create $account $password [$email]",
+    "description": "Create account and set password to it, with email as optional value."
+  },
+  {
+    "name": "account delete",
+    "security": 4,
+    "syntax": ".account delete $account",
+    "description": "Delete account with all characters."
+  },
+  {
+    "name": "account lock country",
+    "security": 0,
+    "syntax": ".account lock country [on/off]",
+    "description": "Allow login from account only from current used Country or remove this requirement."
+  },
+  {
+    "name": "account lock ip",
+    "security": 0,
+    "syntax": ".account lock ip [on/off]",
+    "description": "Allow login from account only from current used IP or remove this requirement."
+  },
+  {
+    "name": "account lock",
+    "security": 0,
+    "syntax": ".account lock [on/off]",
+    "description": "Allow login from account only from current used IP or remove this requirement."
+  },
+  {
+    "name": "account onlinelist",
+    "security": 4,
+    "syntax": ".account onlinelist",
+    "description": "Show list of online accounts."
+  },
+  {
+    "name": "account password",
+    "security": 0,
+    "syntax": ".account password $old_password $new_password $new_password",
+    "description": "Change your account password."
+  },
+  {
+    "name": "account remove country",
+    "security": 3,
+    "syntax": ".account remove country",
+    "description": "Removes the country information associated with the specified account."
+  },
+  {
+    "name": "account set 2fa",
+    "security": 0,
+    "syntax": ".account set 2fa",
+    "description": "Provide a base32 encoded secret to setup two-factor authentication for the account. Specify 'off' to disable two-factor authentication for the account."
+  },
+  {
+    "name": "account set addon",
+    "security": 2,
+    "syntax": ".account set addon [$account] #addon",
+    "description": "Set user (possible targeted) expansion addon level allowed. Addon values: 0 - normal, 1 - tbc, 2 - wotlk."
+  },
+  {
+    "name": "account set gmlevel",
+    "security": 4,
+    "syntax": ".account set gmlevel [$account] #level [#realmid]",
+    "description": "Set the security level for targeted player (can't be used at self) or for account $name to a level of #level on the realm #realmID. #level may range from 0 to 3. #reamID may be -1 for all realms."
+  },
+  {
+    "name": "account set email",
+    "security": 3,
+    "syntax": ".account set email $account $email $email_confirmation",
+    "description": "Add or change an email to the account."
+  },
+  {
+    "name": "account set password",
+    "security": 4,
+    "syntax": ".account set password $account $password $password",
+    "description": "Set password for account."
+  },
+  {
+    "name": "account set",
+    "security": 2,
+    "syntax": ".account set $subcommand",
+    "description": "Type .account set to see the list of possible subcommands or .help account set $subcommand to see info on subcommands"
+  },
+  {
+    "name": "account",
+    "security": 0,
+    "syntax": ".account",
+    "description": "Display the access level of your account."
+  },
+  {
+    "name": "achievement add",
+    "security": 2,
+    "syntax": ".achievement add $achievement",
+    "description": "Add an achievement to the targeted player. $achievement: can be either achievement id or achievement link"
+  },
+  {
+    "name": "achievement checkall",
+    "security": 3,
+    "syntax": ".achievement checkall",
+    "description": "Check all achievement criteria of the selected player."
+  },
+  {
+    "name": "achievement",
+    "security": 2,
+    "syntax": ".achievement $subcommand",
+    "description": "Type .achievement to see the list of possible subcommands or .help achievement $subcommand to see info on subcommands"
+  },
+  {
+    "name": "additem",
+    "security": 2,
+    "syntax": ".additem Optional(playerName/playerGUID) #itemid/[#itemname]/#itemLink #itemcount",
+    "description": "Adds the specified item to you, the selected character or the specifed character name/GUID. If #itemCount is negative, you will remove #itemID."
+  },
+  {
+    "name": "additem set",
+    "security": 2,
+    "syntax": ".additem set #itemsetid",
+    "description": "Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset."
+  },
+  {
+    "name": "announce",
+    "security": 2,
+    "syntax": ".announce $MessageToBroadcast",
+    "description": "Send a global message to all players online in chat log."
+  },
+  {
+    "name": "appear",
+    "security": 1,
+    "syntax": ".appear [$charactername]",
+    "description": "Teleport to the given character. Either specify the character name or click on the character's portrait,e.g. when you are in a group. Character can be offline."
+  },
+  {
+    "name": "arena captain",
+    "security": 3,
+    "syntax": ".arena captain #TeamID $name",
+    "description": "A command to set new captain to the team. $name must be in the team"
+  },
+  {
+    "name": "arena create",
+    "security": 3,
+    "syntax": ".arena create $name \"arena name\" [2/3/5]",
+    "description": "Command to create a new Arena-team in game."
+  },
+  {
+    "name": "arena disband",
+    "security": 3,
+    "syntax": ".arena disband #TeamID",
+    "description": "Command to disband Arena-team in game."
+  },
+  {
+    "name": "arena info",
+    "security": 2,
+    "syntax": ".arena info #TeamID",
+    "description": "Command that show info about arena team"
+  },
+  {
+    "name": "arena lookup",
+    "security": 2,
+    "syntax": ".arena lookup $name",
+    "description": "Command that give a list of arenateam with the given $name"
+  },
+  {
+    "name": "arena rename",
+    "security": 3,
+    "syntax": ".arena rename \"oldname\" \"newname\"",
+    "description": "Command to rename Arena-team name."
+  },
+  {
+    "name": "arena season start",
+    "security": 3,
+    "syntax": ".arena season start $season_id",
+    "description": "Starts a new arena season, places the correct vendors, and sets the new season state to IN PROGRESS."
+  },
+  {
+    "name": "arena season reward",
+    "security": 3,
+    "syntax": ".arena season reward $brackets",
+    "description": "Builds a ladder by combining team brackets and provides rewards from the arena_season_reward table.\\nExample usage:\\n \\n# Combine all brackets, build a ladder, and distribute rewards among them\\n.arena season reward all\\n \\n# Build ladders separately for 2v2, 3v3, and 5v5 brackets so each bracket receives its own rewards\\n.arena season reward 2\\n.arena season reward 3\\n.arena season reward 5\\n \\n# Combine 2v2 and 3v3 brackets and distribute rewards\\n.arena season reward 2,3"
+  },
+  {
+    "name": "arena season deleteteams",
+    "security": 3,
+    "syntax": ".arena season deleteteams",
+    "description": "Deletes ALL arena teams."
+  },
+  {
+    "name": "arena season set state",
+    "security": 3,
+    "syntax": ".arena season set state $state",
+    "description": "Changes the state for the current season.\\nAvailable states:\\n 0 - disabled. Players can't queue for the arena.\\n 1 - in progress. Players can use arena-related functionality."
+  },
+  {
+    "name": "aura",
+    "security": 2,
+    "syntax": ".aura #spellid",
+    "description": "Add the aura from spell #spellid to the selected Unit."
+  },
+  {
+    "name": "aura stack",
+    "security": 2,
+    "syntax": ".aura stack #spellid #stacks",
+    "description": "Modify #stacks of an already applied #spellid to the selected Unit."
+  },
+  {
+    "name": "autobroadcast",
+    "security": 2,
+    "syntax": ".autobroadcast $subcommand",
+    "description": "Type .autobroadcast to see a list of subcommands or .help autobroadcast $subcommand to see info on subcommands."
+  },
+  {
+    "name": "autobroadcast add",
+    "security": 3,
+    "syntax": ".autobroadcast add $weight $text",
+    "description": "Add a new autobroadcast entry with the given weight and text."
+  },
+  {
+    "name": "autobroadcast list",
+    "security": 2,
+    "syntax": ".autobroadcast list",
+    "description": "List all autobroadcast entries."
+  },
+  {
+    "name": "autobroadcast locale",
+    "security": 3,
+    "syntax": ".autobroadcast locale $id $locale $text",
+    "description": "Add or replace a localized text for the autobroadcast entry with the given ID."
+  },
+  {
+    "name": "autobroadcast remove",
+    "security": 3,
+    "syntax": ".autobroadcast remove $id",
+    "description": "Remove the autobroadcast entry with the given ID and its locale entries."
+  },
+  {
+    "name": "bags",
+    "security": 2,
+    "syntax": ".bags $subcommand",
+    "description": "Type .bags to see a list of all subcommands."
+  },
+  {
+    "name": "bags clear",
+    "security": 2,
+    "syntax": ".bags clear $itemquality",
+    "description": "Clear from players' bags all items including and below $itemQuality."
+  },
+  {
+    "name": "bags clear all",
+    "security": 2,
+    "syntax": ".bags clear all",
+    "description": "Clear all items from player"
+  },
+  {
+    "name": "ban account",
+    "security": 2,
+    "syntax": ".ban account $account_name $bantime $reason",
+    "description": "Ban account and kick the player if ingame on any character. $bantime: negative value leads to permban, otherwise use a timestring like4d20h3s."
+  },
+  {
+    "name": "ban character",
+    "security": 2,
+    "syntax": ".ban character $character_name $bantime $reason",
+    "description": "Ban character and kick that character if ingame. $bantime: negative value leads to permban, otherwise use a timestring like4d20h3s."
+  },
+  {
+    "name": "ban ip",
+    "security": 2,
+    "syntax": ".ban ip $Ip $bantime $reason",
+    "description": "Ban IP. $bantime: negative value leads to permban, otherwise use a timestring like4d20h3s."
+  },
+  {
+    "name": "ban playeraccount",
+    "security": 2,
+    "syntax": ".ban playeraccount $character_name $bantime $reason",
+    "description": "Ban an account based on the character's name and kick that character if ingame. $bantime: negative value leads to permban, otherwise use a timestring like4d20h3s."
+  },
+  {
+    "name": "ban",
+    "security": 2,
+    "syntax": ".ban $subcommand",
+    "description": "Type .ban to see the list of possible subcommands or .help ban $subcommand to see info on subcommands"
+  },
+  {
+    "name": "baninfo account",
+    "security": 2,
+    "syntax": ".baninfo account $accountid",
+    "description": "Watch full information about a specific ban."
+  },
+  {
+    "name": "baninfo character",
+    "security": 2,
+    "syntax": ".baninfo character $charactername",
+    "description": "Watch full information about a specific ban."
+  },
+  {
+    "name": "baninfo ip",
+    "security": 2,
+    "syntax": ".baninfo ip $ip",
+    "description": "Watch full information about a specific ban."
+  },
+  {
+    "name": "baninfo",
+    "security": 2,
+    "syntax": ".baninfo $subcommand",
+    "description": "Type .baninfo to see the list of possible subcommands or .help baninfo $subcommand to see info on subcommands"
+  },
+  {
+    "name": "banlist account",
+    "security": 2,
+    "syntax": ".banlist account [$Name]",
+    "description": "Searches the banlist for a account name pattern or show full list account bans."
+  },
+  {
+    "name": "banlist character",
+    "security": 2,
+    "syntax": ".banlist character $Name",
+    "description": "Searches the banlist for a character name pattern. Pattern required."
+  },
+  {
+    "name": "banlist ip",
+    "security": 2,
+    "syntax": ".banlist ip [$Ip]",
+    "description": "Searches the banlist for a IP pattern or show full list of IP bans."
+  },
+  {
+    "name": "banlist",
+    "security": 2,
+    "syntax": ".banlist $subcommand",
+    "description": "Type .banlist to see the list of possible subcommands or .help banlist $subcommand to see info on subcommands"
+  },
+  {
+    "name": "bf",
+    "security": 3,
+    "syntax": ".bf $subcommand",
+    "description": "Type .bf to see the list of possible subcommands or .help bf $subcommand to see info on subcommands."
+  },
+  {
+    "name": "bf enable",
+    "security": 3,
+    "syntax": ".bf enable #battleid",
+    "description": ""
+  },
+  {
+    "name": "bf queue",
+    "security": 2,
+    "syntax": ".bf queue #battleid",
+    "description": "Displays all players currently in queue, invited, or actively in war for the specified battlefield. #battleid: the battle ID (e.g. 1 for Wintergrasp)."
+  },
+  {
+    "name": "bf start",
+    "security": 3,
+    "syntax": ".bf start #battleid",
+    "description": ""
+  },
+  {
+    "name": "bf stop",
+    "security": 3,
+    "syntax": ".bf stop #battleid",
+    "description": ""
+  },
+  {
+    "name": "bf switch",
+    "security": 3,
+    "syntax": ".bf switch #battleid",
+    "description": ""
+  },
+  {
+    "name": "bf timer",
+    "security": 3,
+    "syntax": ".bf timer #battleid #timer",
+    "description": ""
+  },
+  {
+    "name": "bindsight",
+    "security": 3,
+    "syntax": ".bindsight",
+    "description": "Binds vision to the selected unit indefinitely. Cannot be used while currently possessing a target."
+  },
+  {
+    "name": "bm",
+    "security": 2,
+    "syntax": ".bm [on/off]",
+    "description": "Enable or Disable in game Beastmaster mode or show current state if on/off not provided."
+  },
+  {
+    "name": "cache",
+    "security": 2,
+    "syntax": ".cache $subcommand",
+    "description": "Character data cached during start up. Type .cache to see a list of subcommands or .help $subcommand to see info on subcommands."
+  },
+  {
+    "name": "cache delete",
+    "security": 3,
+    "syntax": ".cache delete $playername",
+    "description": "Deletes the cached data for the selected character. Use for debugging only!"
+  },
+  {
+    "name": "cache info",
+    "security": 2,
+    "syntax": ".cache info $playerNameDisplays",
+    "description": "cached data for the selected character."
+  },
+  {
+    "name": "cache refresh",
+    "security": 2,
+    "syntax": ".cache refresh $playerName",
+    "description": "Deletes the current cache and refreshes it with updated data."
+  },
+  {
+    "name": "cast back",
+    "security": 2,
+    "syntax": ".cast back #spellid [triggered]",
+    "description": "Selected target will cast #spellid to your character. If 'trigered' or part provided then spell casted with triggered flag."
+  },
+  {
+    "name": "cast dest",
+    "security": 2,
+    "syntax": ".cast dest #spellid #x #y #z [triggered]",
+    "description": "Selected target will cast #spellid at provided destination. If 'trigered' or part provided then spell casted with triggered flag."
+  },
+  {
+    "name": "cast dist",
+    "security": 2,
+    "syntax": ".cast dist #spellid [#dist [triggered]]",
+    "description": "You will cast spell to pint at distance #dist. If 'trigered' or part provided then spell casted with triggered flag. Not all spells can be casted as area spells."
+  },
+  {
+    "name": "cast self",
+    "security": 2,
+    "syntax": ".cast self #spellid [triggered]",
+    "description": "Cast #spellid by target at target itself. If 'trigered' or part provided then spell casted with triggered flag."
+  },
+  {
+    "name": "cast target",
+    "security": 2,
+    "syntax": ".cast target #spellid [triggered]",
+    "description": "Selected target will cast #spellid to his victim. If 'trigered' or part provided then spell casted with triggered flag."
+  },
+  {
+    "name": "cast",
+    "security": 2,
+    "syntax": ".cast #spellid [triggered]",
+    "description": "Cast #spellid to selected target. If no target selected cast to self. If 'trigered' or part provided then spell casted with triggered flag."
+  },
+  {
+    "name": "character",
+    "security": 2,
+    "syntax": ".character $subcommand",
+    "description": "Type .character to see a list of possible subcommands or .help character $subcommand to see info on the subcommand."
+  },
+  {
+    "name": "character changeaccount",
+    "security": 3,
+    "syntax": ".character changeaccount $NewAccountNAme $Name",
+    "description": "Moves the specified character to the provided account. Kicks the player if the character is online."
+  },
+  {
+    "name": "character changefaction",
+    "security": 2,
+    "syntax": ".character changefaction $name",
+    "description": "Change character faction."
+  },
+  {
+    "name": "character changerace",
+    "security": 2,
+    "syntax": ".character changerace $name",
+    "description": "Change character race."
+  },
+  {
+    "name": "character check bag",
+    "security": 2,
+    "syntax": ".character check bag [$target_player] #bagSlot 1 - 4",
+    "description": "Check players bag."
+  },
+  {
+    "name": "character check bank",
+    "security": 2,
+    "syntax": ".character check bank",
+    "description": "Check your own bank."
+  },
+  {
+    "name": "character check profession",
+    "security": 2,
+    "syntax": ".character check profession [$target_player]",
+    "description": "Show known professions list for selected player"
+  },
+  {
+    "name": "character customize",
+    "security": 2,
+    "syntax": ".character customize [$name]",
+    "description": "Mark selected in game or by $name in command character for customize at next login."
+  },
+  {
+    "name": "character deleted delete",
+    "security": 4,
+    "syntax": ".character deleted delete #guid\\$name",
+    "description": "Completely deletes the selected characters. If $name is supplied, only characters with that string in their name will be deleted, if #guid is supplied, only the character with that GUID will be deleted."
+  },
+  {
+    "name": "character deleted list",
+    "security": 3,
+    "syntax": ".character deleted list [#guid\\$name]",
+    "description": "Shows a list with all deleted characters. If $name is supplied, only characters with that string in their name will be selected, if #guid is supplied, only the character with that GUID will be selected."
+  },
+  {
+    "name": "character deleted purge",
+    "security": 4,
+    "syntax": ".character deleted purge [#keepDays]",
+    "description": "Completely removes all characters from the database that where deleted more than #keepDays ago. If #keepDays not provided the used value from worldserver.conf option 'CharDelete.KeepDays'. If 'CharDelete.KeepDays' option is disabled (set to value 0) then this command can't be used without the specifying #keepDays parameter."
+  },
+  {
+    "name": "character deleted restore",
+    "security": 3,
+    "syntax": ".character deleted restore #guid\\$name [$newname] [#new account]",
+    "description": "Restores deleted characters. If $name is supplied, only characters with that string in their name will be restored, if $guid is supplied, only the character with that GUID will be restored. If $newname is set, the character will be restored with that name instead of the original one. If #newaccount is set, the character will be restored to specific account character list. This works only with one character!"
+  },
+  {
+    "name": "character erase",
+    "security": 4,
+    "syntax": ".character erase $name",
+    "description": "Delete character $name. Character finally deleted in case any deleting options."
+  },
+  {
+    "name": "character level",
+    "security": 3,
+    "syntax": ".character level [$playername] [#level]",
+    "description": "Set the level of character with $playername (or the selected if not name provided) by #numberoflevels Or +1 if no #numberoflevels provided). If #numberoflevels is omitted, the level will be increase by 1. If #numberoflevels is 0, the same level will be restarted. If no character is selected and name not provided, increase your level. Command can be used for offline character. All stats and dependent values recalculated. At level decrease talents can be reset if need. Also at level decrease equipped items with greater level requirement can be lost."
+  },
+  {
+    "name": "character rename",
+    "security": 2,
+    "syntax": ".character rename [$character_name] [1]",
+    "description": "Mark selected in game or by $character_name in command character for rename at next login. Adding an1 at the end saves the old name into thecharacters.reserved_name table and prevents accounts with GMlevel 0 from re-using said old name."
+  },
+  {
+    "name": "character reputation",
+    "security": 2,
+    "syntax": ".character reputation [$player_name]",
+    "description": "Show reputation information for selected player or player find by $player_name."
+  },
+  {
+    "name": "character titles",
+    "security": 2,
+    "syntax": ".character titles [$player_name]",
+    "description": "Show known titles list for selected player or player find by $player_name."
+  },
+  {
+    "name": "chatfilter",
+    "security": 2,
+    "syntax": ".chatfilter $subcommand",
+    "description": "Type .chatfilter to see a list of subcommands or .help chatfilter $subcommand to see info on subcommands."
+  },
+  {
+    "name": "chatfilter add",
+    "security": 3,
+    "syntax": ".chatfilter add $word",
+    "description": "Add $word to thechat_filter table and reload the chat filter."
+  },
+  {
+    "name": "chatfilter list",
+    "security": 2,
+    "syntax": ".chatfilter list",
+    "description": "List all entries from thechat_filter table."
+  },
+  {
+    "name": "chatfilter remove",
+    "security": 3,
+    "syntax": ".chatfilter remove $word",
+    "description": "Remove $word from thechat_filter table and reload the chat filter."
+  },
+  {
+    "name": "cheat casttime",
+    "security": 2,
+    "syntax": ".cheat casttime [on/off]",
+    "description": "Enables or disables your character's spell cast times."
+  },
+  {
+    "name": "cheat cooldown",
+    "security": 2,
+    "syntax": ".cheat cooldown [on/off]",
+    "description": "Enables or disables your character's spell cooldowns."
+  },
+  {
+    "name": "cheat explore",
+    "security": 2,
+    "syntax": ".cheat explore #flag",
+    "description": "Reveal or hide all maps for the selected player. If no player is selected, hide or reveal maps to you. Use a #flag of value 1 to reveal, use a #flag value of 0 to hide all maps."
+  },
+  {
+    "name": "cheat god",
+    "security": 2,
+    "syntax": ".cheat god [on/off]",
+    "description": "Enables or disables your character's ability to take damage."
+  },
+  {
+    "name": "cheat power",
+    "security": 2,
+    "syntax": ".cheat power [on/off]",
+    "description": "Enables or disables your character's spell cost (e.g mana)."
+  },
+  {
+    "name": "cheat status",
+    "security": 2,
+    "syntax": ".cheat status",
+    "description": "Shows the cheats you currently have enabled."
+  },
+  {
+    "name": "cheat taxi",
+    "security": 2,
+    "syntax": ".cheat taxi on/off",
+    "description": "Temporary grant access or remove to all taxi routes for the selected character. If no character is selected, hide or reveal all routes to you.Visited taxi nodes sill accessible after removing access."
+  },
+  {
+    "name": "cheat waterwalk",
+    "security": 2,
+    "syntax": ".cheat waterwalk on/off",
+    "description": "Set on/off waterwalk state for selected player or self if no player selected."
+  },
+  {
+    "name": "cheat",
+    "security": 2,
+    "syntax": ".cheat $subcommand",
+    "description": "Type .cheat to see the list of possible subcommands or .help cheat $subcommand to see info on subcommands"
+  },
+  {
+    "name": "combatstop",
+    "security": 2,
+    "syntax": ".combatstop [$playername]",
+    "description": "Stop combat for selected character. If selected non-player then command applied to self. If $playername provided then attempt applied to online player $playername."
+  },
+  {
+    "name": "cometome",
+    "security": 3,
+    "syntax": ".cometome $parameter",
+    "description": "Make selected creature come to your current location (new position not saved to DB)."
+  },
+  {
+    "name": "commands",
+    "security": 0,
+    "syntax": ".commands",
+    "description": "Display a list of available commands for your account level."
+  },
+  {
+    "name": "commentator",
+    "security": 1,
+    "syntax": ".commentator [on/off]",
+    "description": "Enable or Disable in game Commentator tag or show current state if on/off not provided."
+  },
+  {
+    "name": "cooldown",
+    "security": 2,
+    "syntax": ".cooldown [#spell_id]",
+    "description": "Remove all (if spell_id not provided) or #spel_id spell cooldown from selected character or you (if no selection)."
+  },
+  {
+    "name": "damage",
+    "security": 2,
+    "syntax": ".damage $damage_amount [$school [$spellid]]",
+    "description": "Apply $damage to target. If not $school and $spellid provided then this flat clean melee damage without any modifiers. If $school provided then damage modified by armor reduction (if school physical), and target absorbing modifiers and result applied as melee damage to target. If spell provided then damage modified and applied as spell damage. $spellid can be shift-link."
+  },
+  {
+    "name": "debug anim",
+    "security": 3,
+    "syntax": ".debug anim",
+    "description": "TODO"
+  },
+  {
+    "name": "debug areatriggers",
+    "security": 3,
+    "syntax": ".debug areatriggers",
+    "description": "Toggle debug mode for areatriggers. In debug mode GM will be notified if reaching an areatrigger"
+  },
+  {
+    "name": "debug arena",
+    "security": 3,
+    "syntax": ".debug arena",
+    "description": "Toggle debug mode for arenas. In debug mode GM can start arena with single player."
+  },
+  {
+    "name": "debug bg",
+    "security": 3,
+    "syntax": ".debug bg",
+    "description": "Toggle debug mode for battlegrounds. In debug mode GM can start battleground with single player."
+  },
+  {
+    "name": "debug boundary",
+    "security": 3,
+    "syntax": ".debug boundary [duration] [fill] [z]",
+    "description": "Visualizes map boundaries for the GM. Optional arguments:duration: Duration in ms (default: 5000 [5 seconds], max: 180000 [3 minutes]).fill: Fills the boundary with markers.z: Includes z-axis in visualization."
+  },
+  {
+    "name": "debug cooldown",
+    "security": 3,
+    "syntax": ".debug cooldown #spellID #cooldownTime #itemID",
+    "description": "Apply a cooldown of the given duration (in milliseconds) for the given spell and item ID."
+  },
+  {
+    "name": "debug dummy",
+    "security": 3,
+    "syntax": ".debug dummy",
+    "description": "Catch-all debug command. Does nothing by default."
+  },
+  {
+    "name": "debug entervehicle",
+    "security": 3,
+    "syntax": "",
+    "description": "Enter targeted vehicle."
+  },
+  {
+    "name": "debug factionchange",
+    "security": 3,
+    "syntax": ".debug factionchange [$playerName]",
+    "description": "Checks all faction/race change requirements for the target player and reports pass/fail for each condition (AT_LOGIN flags, guild, arena captain, mail, auctions, gold limit)."
+  },
+  {
+    "name": "debug getitemstate",
+    "security": 3,
+    "syntax": ".debug getitemstate [unchanged\\changed\\new\\removed\\queue\\check_all]",
+    "description": "Get specified item state of the items of the selected player."
+  },
+  {
+    "name": "debug getitemvalue",
+    "security": 3,
+    "syntax": ".debug getitemvalue $guid $index",
+    "description": "Get value from item with $guid at $index."
+  },
+  {
+    "name": "debug getvalue",
+    "security": 3,
+    "syntax": ".debug $field [1\\0]",
+    "description": "1: get uint32 value of $field of the selected unit; 0: get float value of $field of the selected unit"
+  },
+  {
+    "name": "debug hostil",
+    "security": 1,
+    "syntax": "",
+    "description": "Get hostile reference list of the selected unit."
+  },
+  {
+    "name": "debug hostile",
+    "security": 3,
+    "syntax": ".debug hostile",
+    "description": "Returns the hostile reference list of a given player."
+  },
+  {
+    "name": "debug itemexpire",
+    "security": 3,
+    "syntax": ".debug itemexpire $guid",
+    "description": "Delete the item with $guid."
+  },
+  {
+    "name": "debug lfg",
+    "security": 3,
+    "syntax": ".debug lfg",
+    "description": "Toggle debug mode for lfg. In debug mode GM can start lfg queue with one player."
+  },
+  {
+    "name": "debug loot",
+    "security": 2,
+    "syntax": ".debug loot [count]",
+    "description": "Simulates loot generation for the given loot type and ID, outputting the results to chat without creating items. Optional count (1-100) repeats the simulation and shows aggregated drop rates. Valid types: creature, gameobject, fishing, item, pickpocketing, skinning, disenchant, prospecting, milling, spell, reference, mail, player."
+  },
+  {
+    "name": "debug lootrecipient",
+    "security": 3,
+    "syntax": ".debug lootrecipient",
+    "description": "Get loot recipient of the selected creature."
+  },
+  {
+    "name": "debug los",
+    "security": 3,
+    "syntax": ".debug los",
+    "description": "Show information about the line of sight status."
+  },
+  {
+    "name": "debug mapdata",
+    "security": 3,
+    "syntax": ".debug mapdata",
+    "description": "Displays debug information about the current map."
+  },
+  {
+    "name": "debug Mod32Value",
+    "security": 3,
+    "syntax": ".debug Mod32Value #field #value",
+    "description": "Add #value to field #field of your character."
+  },
+  {
+    "name": "debug moveflags",
+    "security": 3,
+    "syntax": ".debug moveflags [$newMoveFlags [$newMoveFlags2]]",
+    "description": "No params given will output the current moveflags of the target"
+  },
+  {
+    "name": "debug objectcount",
+    "security": 3,
+    "syntax": ".debug objectcount",
+    "description": "Shows the number of Creatures and GameObjects for the specified map id or for all maps if none is specified"
+  },
+  {
+    "name": "debug play",
+    "security": 1,
+    "syntax": ".debug play $subcommand",
+    "description": "Type .debug play to see the list of possible subcommands or .help debug play $subcommand to see info on subcommands."
+  },
+  {
+    "name": "debug play cinematic",
+    "security": 1,
+    "syntax": ".debug play cinematic #cinematicid",
+    "description": "Play cinematic #cinematicid for you. You stay at place while your mind fly."
+  },
+  {
+    "name": "debug play movie",
+    "security": 1,
+    "syntax": ".debug play movie #movieid",
+    "description": "Play movie #movieid for you."
+  },
+  {
+    "name": "debug play music",
+    "security": 3,
+    "syntax": ".debug play music",
+    "description": "Play music with the given musicId. Music will be played only for you. Other players will not hear this."
+  },
+  {
+    "name": "debug play sound",
+    "security": 1,
+    "syntax": ".debug play sound #soundid",
+    "description": "Play sound with #soundid. Sound will be play only for you. Other players do not hear this. Warning: client may have more 5000 sounds..."
+  },
+  {
+    "name": "debug play visual",
+    "security": 3,
+    "syntax": ".debug play visual #visualid",
+    "description": "Play spell visual with #visualid. #visualid refers to the ID from SpellVisualKit.dbc."
+  },
+  {
+    "name": "debug send",
+    "security": 3,
+    "syntax": ".debug send $subcommand",
+    "description": "Type .debug send to see the list of possible subcommands or .help debug send $subcommand to see info on subcommands."
+  },
+  {
+    "name": "debug send buyerror",
+    "security": 3,
+    "syntax": ".debug send buyerror #errorid",
+    "description": "Test buy error id."
+  },
+  {
+    "name": "debug send channelnotify",
+    "security": 3,
+    "syntax": ".debug send channelnotify #notifytype",
+    "description": "Send #notifytype to the channel \"test\"."
+  },
+  {
+    "name": "debug send chatmessage",
+    "security": 3,
+    "syntax": ".debug send chatmessage #type",
+    "description": "Sends a chat message of the given type."
+  },
+  {
+    "name": "debug send chatmmessage",
+    "security": 3,
+    "syntax": ".debug send chatmmessage #msgtype",
+    "description": "Send a message \"testtest\" of type #msgtype."
+  },
+  {
+    "name": "debug send equiperror",
+    "security": 3,
+    "syntax": ".debug send equiperror #errorid",
+    "description": "Test equip error id."
+  },
+  {
+    "name": "debug send largepacket",
+    "security": 3,
+    "syntax": ".send largepacket",
+    "description": "Send large packet (>128000 bytes)."
+  },
+  {
+    "name": "debug send opcode",
+    "security": 3,
+    "syntax": ".debug send opcode",
+    "description": "Sends a packet to the current player as specified in the file \"opcode.txt\" which has to lie in the server's working directory. Example for the content of the file:631 uint32 6146 which starts a different background music on the client: Opcode \"SMSG_PLAY_MUSIC\" (dec 631, hex 0x277) which needs in this case an uint32 to specify the sound ID (here: 6146 \"Zone - Orgrimmar02\")."
+  },
+  {
+    "name": "debug send qinvalidmsg",
+    "security": 3,
+    "syntax": ".debug send qinvalidmsg #questfailedreasons",
+    "description": "Send a quest failed message of type #questfailedreasons to the current player."
+  },
+  {
+    "name": "debug send qpartymsg",
+    "security": 3,
+    "syntax": ".debug send qpartymsg #questsharemessages",
+    "description": "Send a quest share message of type #questsharemessages to the current player."
+  },
+  {
+    "name": "debug send sellerror",
+    "security": 3,
+    "syntax": ".debug send sellerror #errorid",
+    "description": "Test sell error id."
+  },
+  {
+    "name": "debug send setphaseshift",
+    "security": 3,
+    "syntax": ".debug send setphaseshift #phaseshift",
+    "description": "Send phase shift packet to the current player."
+  },
+  {
+    "name": "debug send spellfail",
+    "security": 3,
+    "syntax": ".debug send spellfail #resultid [#arg1] [#arg2]",
+    "description": "Send spell fail packet to the current player using spell result #resultid and optional arguments #arg1 and #arg2."
+  },
+  {
+    "name": "debug setaurastate",
+    "security": 3,
+    "syntax": ".debug setaurastate #aurastatetype",
+    "description": "Modify aura state of the selected unit (#aurastatetype > 0) or reset the state (#aurastatetype = 0)."
+  },
+  {
+    "name": "debug setbit",
+    "security": 3,
+    "syntax": ".debug setbit #fieldnumber #bitnumber",
+    "description": "Set bit #bitnumber of field #fieldnumber for the selected unit."
+  },
+  {
+    "name": "debug setitemvalue",
+    "security": 3,
+    "syntax": ".debug getitemvalue $guid $index $value",
+    "description": "Set $value for item with $guid at $index."
+  },
+  {
+    "name": "debug setvalue",
+    "security": 3,
+    "syntax": ".debug $field $value [1\\0]",
+    "description": "1: set uint32 $value for $field of the selected unit; 0: set float $value for $field of the selected unit"
+  },
+  {
+    "name": "debug setvid",
+    "security": 3,
+    "syntax": ".debug setvid #ID",
+    "description": "Currently disabled. Sets the given target's vehicle ID to the given value."
+  },
+  {
+    "name": "debug spawnvehicle",
+    "security": 3,
+    "syntax": ".debug spawnvehicle #entry [#vehicleid]",
+    "description": "Spawn vehicle with creature template #entry and optional #vehicleid."
+  },
+  {
+    "name": "debug threat",
+    "security": 3,
+    "syntax": ".debug threat",
+    "description": "Returns the threat list of a given creature."
+  },
+  {
+    "name": "debug unitstate",
+    "security": 3,
+    "syntax": ".debug unitstate [#unitstate]",
+    "description": "Set #unitstate for the selected unit. If no parameter is specified show the unit state and the react state of the unit."
+  },
+  {
+    "name": "debug update",
+    "security": 3,
+    "syntax": ".debug update #index #value",
+    "description": "Sets the unsigned 32-bit integer value of the target at the given index to the given value."
+  },
+  {
+    "name": "debug uws",
+    "security": 3,
+    "syntax": ".debug uws #worldstate #value",
+    "description": "Send update world state for #worldstate and #value to the current player."
+  },
+  {
+    "name": "debug visibilitydata",
+    "security": 3,
+    "syntax": ".debug visibilitydata",
+    "description": "Displays debug information related to object visibility around the player."
+  },
+  {
+    "name": "debug zonestats",
+    "security": 1,
+    "syntax": ".debug zonestats [$playerName]",
+    "description": "Displays the amount of players in the player's current zone."
+  },
+  {
+    "name": "debug",
+    "security": 2,
+    "syntax": ".debug $subcommand",
+    "description": "Type .debug to see the list of possible subcommands or .help debug $subcommand to see info on subcommands"
+  },
+  {
+    "name": "deserter bg add",
+    "security": 3,
+    "syntax": ".deserter bg add [$playerName] [$time]",
+    "description": "Adds the bg deserter debuff to a player or your target with $time duration. Default $time: 15m"
+  },
+  {
+    "name": "deserter bg remove",
+    "security": 3,
+    "syntax": ".deserter bg remove [$playerName]",
+    "description": "Removes the bg deserter debuff from a player or your target."
+  },
+  {
+    "name": "deserter bg remove all",
+    "security": 3,
+    "syntax": ".deserter bg remove all [$maxDuration]",
+    "description": "Removes the bg deserter debuff from all online and offline players. $maxDuration sets the maximum duration to be removed. Default: 15m"
+  },
+  {
+    "name": "deserter instance add",
+    "security": 3,
+    "syntax": ".deserter instance add [$playerName] [$time]",
+    "description": "Adds the instance deserter debuff to a player or your target with $time duration. Default $time: 30m"
+  },
+  {
+    "name": "deserter instance remove",
+    "security": 3,
+    "syntax": ".deserter instance remove [$playerName]",
+    "description": "Removes the instance deserter debuff from a player or your target."
+  },
+  {
+    "name": "deserter instance remove all",
+    "security": 3,
+    "syntax": ".deserter instance remove all [$maxDuration]",
+    "description": "Removes the instance deserter debuff from all online and offline players. $maxDuration sets the maximum duration to be removed. Default: 30m"
+  },
+  {
+    "name": "dev",
+    "security": 3,
+    "syntax": ".dev [on/off]",
+    "description": "Enable or Disable in game Dev tag or show current state if on/off not provided."
+  },
+  {
+    "name": "die",
+    "security": 2,
+    "syntax": ".die",
+    "description": "Kill the selected player. If no player is selected, it will kill you."
+  },
+  {
+    "name": "disable add battleground",
+    "security": 3,
+    "syntax": ".disable add battleground $entry $flag $comment",
+    "description": ""
+  },
+  {
+    "name": "disable add map",
+    "security": 3,
+    "syntax": ".disable add map $entry $flag $comment",
+    "description": ""
+  },
+  {
+    "name": "disable add outdoorpvp",
+    "security": 3,
+    "syntax": ".disable add outdoorpvp $entry $flag $comment",
+    "description": ""
+  },
+  {
+    "name": "disable add quest",
+    "security": 3,
+    "syntax": ".disable add quest $entry $flag $comment",
+    "description": ""
+  },
+  {
+    "name": "disable add spell",
+    "security": 3,
+    "syntax": ".disable add spell $entry $flag $comment",
+    "description": ""
+  },
+  {
+    "name": "disable add vmap",
+    "security": 3,
+    "syntax": ".disable add vmap $entry $flag $comment",
+    "description": ""
+  },
+  {
+    "name": "disable remove battleground",
+    "security": 3,
+    "syntax": ".disable remove battleground $entry",
+    "description": ""
+  },
+  {
+    "name": "disable remove map",
+    "security": 3,
+    "syntax": ".disable remove map $entry",
+    "description": ""
+  },
+  {
+    "name": "disable remove outdoorpvp",
+    "security": 3,
+    "syntax": ".disable remove outdoorpvp $entry",
+    "description": ""
+  },
+  {
+    "name": "disable remove quest",
+    "security": 3,
+    "syntax": ".disable remove quest $entry",
+    "description": ""
+  },
+  {
+    "name": "disable remove spell",
+    "security": 3,
+    "syntax": ".disable remove spell $entry",
+    "description": ""
+  },
+  {
+    "name": "disable remove vmap",
+    "security": 3,
+    "syntax": ".disable remove vmap $entry",
+    "description": ""
+  },
+  {
+    "name": "dismount",
+    "security": 0,
+    "syntax": ".dismount",
+    "description": "Dismount you, if you are mounted."
+  },
+  {
+    "name": "distance",
+    "security": 3,
+    "syntax": ".distance",
+    "description": "Display the distance from your character to the selected creature."
+  },
+  {
+    "name": "event activelist",
+    "security": 2,
+    "syntax": ".event activelist",
+    "description": "Show list of currently active events."
+  },
+  {
+    "name": "event info",
+    "security": 2,
+    "syntax": ".event info [event_id]",
+    "description": "Displays information about game events."
+  },
+  {
+    "name": "event start",
+    "security": 2,
+    "syntax": ".event start #event_id",
+    "description": "Start event #event_id. Set start time for event to current moment (change not saved in DB)."
+  },
+  {
+    "name": "event stop",
+    "security": 2,
+    "syntax": ".event stop #event_id",
+    "description": "Stop event #event_id. Set start time for event to time in past that make current moment is event stop time (change not saved in DB)."
+  },
+  {
+    "name": "event",
+    "security": 2,
+    "syntax": ".event #event_id",
+    "description": "Show details about event with #event_id."
+  },
+  {
+    "name": "flusharenapoints",
+    "security": 3,
+    "syntax": ".flusharenapoints",
+    "description": "Use it to distribute arena points based on arena team ratings, and start a new week."
+  },
+  {
+    "name": "freeze",
+    "security": 2,
+    "syntax": ".freeze (#player)",
+    "description": "\"Freezes\" #player and disables his chat. When using this without #name it will freeze your target."
+  },
+  {
+    "name": "gear repair",
+    "security": 2,
+    "syntax": ".gear repair",
+    "description": "Repair all selected player's items."
+  },
+  {
+    "name": "gear stats",
+    "security": 0,
+    "syntax": ".gear stats",
+    "description": "Shows targeted players' average itemlevel"
+  },
+  {
+    "name": "gm chat",
+    "security": 2,
+    "syntax": ".gm chat [on/off]",
+    "description": "Enable or disable chat GM MODE (show gm badge in messages) or show current state of on/off not provided."
+  },
+  {
+    "name": "gm fly",
+    "security": 2,
+    "syntax": ".gm fly [on/off]",
+    "description": "Enable/disable gm fly mode."
+  },
+  {
+    "name": "gm ingame",
+    "security": 0,
+    "syntax": ".gm ingame",
+    "description": "Display a list of available in game Game Masters."
+  },
+  {
+    "name": "gm list",
+    "security": 3,
+    "syntax": ".gm list",
+    "description": "Display a list of all Game Masters accounts and security levels."
+  },
+  {
+    "name": "gm off",
+    "security": 1,
+    "syntax": ".gm off",
+    "description": "Turns off GM flag."
+  },
+  {
+    "name": "gm on",
+    "security": 1,
+    "syntax": ".gm on",
+    "description": "Turns on GM flag."
+  },
+  {
+    "name": "gm spectator",
+    "security": 2,
+    "syntax": ".gm spectator on/off",
+    "description": "Requires.gm on, allows theGM character to use/follow on members of oppsite faction.Note: You may need to teleport to another zone / load a new area, it doesn't update on the fly."
+  },
+  {
+    "name": "gm visible",
+    "security": 2,
+    "syntax": ".gm visible on/off",
+    "description": "Output current visibility state or make GM visible(on) and invisible(off) for other players."
+  },
+  {
+    "name": "gm",
+    "security": 1,
+    "syntax": ".gm [on/off]",
+    "description": "Enable or Disable in game GM MODE or show current state of on/off not provided."
+  },
+  {
+    "name": "gmannounce",
+    "security": 2,
+    "syntax": ".gmannounce $announcement",
+    "description": "Send an announcement to online Gamemasters."
+  },
+  {
+    "name": "gmnameannounce",
+    "security": 2,
+    "syntax": ".gmnameannounce $announcement",
+    "description": "Send an announcement to all online GM's, displaying the name of the sender."
+  },
+  {
+    "name": "gmnotify",
+    "security": 2,
+    "syntax": ".gmnotify $notification",
+    "description": "Displays a notification on the screen of all online GM's."
+  },
+  {
+    "name": "go creature",
+    "security": 1,
+    "syntax": ".go creature $creature.guid",
+    "description": "Teleports you to the creature usingguid value ofcreature table."
+  },
+  {
+    "name": "go creature id",
+    "security": 1,
+    "syntax": ".go creature id $creature_template.entry [#spawn]",
+    "description": "Teleports you to a creature using theentry value ofcreature_template table. Using#spawn value will use position (row) in thecreature database, in the case no value is provided and multiple creature of the sameentry(id1) existing in the world, you will be teleported to the lowestguid creature."
+  },
+  {
+    "name": "go creature name",
+    "security": 1,
+    "syntax": ".go creature name $creature_template.name",
+    "description": "Teleports you to a creature using thename value ofcreature_template table. In the case of multiple creature of the samename existing in the world, you will be teleported to the lowestguid creature.When running the command for names with spaces don't break the string, example:.go creature name Ruby Scalebane"
+  },
+  {
+    "name": "go gameobject",
+    "security": 1,
+    "syntax": ".go gameobject $gameobject.guid",
+    "description": "Teleports you to the gameobject usingguid value ofgameobject table."
+  },
+  {
+    "name": "go gameobject id",
+    "security": 1,
+    "syntax": ".go gameobject id $gameobject_template.entry [#spawn]",
+    "description": "Teleports you to a gameobject using theentry value ofgameobject_template table. Using#spawn value will use position (row) in thegameobject database, in the case no value is provided and multiple creature of the sameentry(id) existing in the world, you will be teleported to the lowestguid object."
+  },
+  {
+    "name": "go graveyard",
+    "security": 1,
+    "syntax": ".go graveyard #graveyardId",
+    "description": "Teleport to graveyard with the graveyardId specified."
+  },
+  {
+    "name": "go grid",
+    "security": 1,
+    "syntax": ".go grid #gridX #gridY [#mapId]",
+    "description": "Teleport the gm to center of grid with provided indexes at map #mapId (or current map if it not provided)."
+  },
+  {
+    "name": "go quest",
+    "security": 1,
+    "syntax": ".go quest",
+    "description": "Teleports you to the quest starter/ender creature or object."
+  },
+  {
+    "name": "go taxinode",
+    "security": 1,
+    "syntax": ".go taxinode #taxinode",
+    "description": "Teleport player to taxinode coordinates. You can look up zone using .lookup taxinode $namepart"
+  },
+  {
+    "name": "go ticket",
+    "security": 2,
+    "syntax": ".go ticket #ticketid",
+    "description": "Teleports the user to the location where $ticketid was created."
+  },
+  {
+    "name": "go trigger",
+    "security": 1,
+    "syntax": ".go trigger #trigger_id",
+    "description": "Teleport your character to areatrigger with id #trigger_id. Character will be teleported to trigger target if selected areatrigger is telporting trigger."
+  },
+  {
+    "name": "go xyz",
+    "security": 1,
+    "syntax": ".go xyz #x #y [#z [#mapid [#orientation]]]",
+    "description": "Teleport player to point with (#x,#y,#z) coordinates at map #mapid with orientation #orientation. If z is not provided, ground/water level will be used. If mapid is not provided, the current map will be used. If #orientation is not provided, the current orientation will be used. Non-numbers are allowed and will be ignored."
+  },
+  {
+    "name": "go zonexy",
+    "security": 1,
+    "syntax": ".go zonexy #x #y [#zone]",
+    "description": "Teleport player to point with (#x,#y) client coordinates at ground(water) level in zone #zoneid or current zone if #zoneid not provided. You can look up zone using .lookup area $namepart"
+  },
+  {
+    "name": "go",
+    "security": 1,
+    "syntax": ".go $subcommand",
+    "description": "Type .go to see the list of possible subcommands or .help go $subcommand to see info on subcommands"
+  },
+  {
+    "name": "gobject activate",
+    "security": 2,
+    "syntax": ".gobject activate #guid",
+    "description": "Activates an object like a door or a button."
+  },
+  {
+    "name": "gobject add temp",
+    "security": 2,
+    "syntax": "",
+    "description": "Adds a temporary gameobject that is not saved to DB."
+  },
+  {
+    "name": "gobject add",
+    "security": 3,
+    "syntax": ".gobject add #id",
+    "description": "Add a game object from game object templates to the world at your current location using the #id. spawntimesecs sets the spawntime, it is optional. Note: this is a copy of .gameobject."
+  },
+  {
+    "name": "gobject delete",
+    "security": 3,
+    "syntax": ".gobject delete #go_guid",
+    "description": "Delete gameobject with guid #go_guid."
+  },
+  {
+    "name": "gobject despawngroup",
+    "security": 3,
+    "syntax": ".gobject despawngroup #groupId",
+    "description": "Despawns all gameobjects in the given spawn group."
+  },
+  {
+    "name": "gobject info",
+    "security": 1,
+    "syntax": ".gobject info [$object_entry]",
+    "description": "Query Gameobject information for selected gameobject or given entry."
+  },
+  {
+    "name": "gobject load",
+    "security": 3,
+    "syntax": ".gobject load #spawnId",
+    "description": "Load a gameobject spawn from the database into the world by its GUID."
+  },
+  {
+    "name": "gobject move",
+    "security": 3,
+    "syntax": ".gobject move #goguid [#x #y #z]",
+    "description": "Move gameobject #goguid to character coordinates (or to (#x,#y,#z) coordinates if its provide)."
+  },
+  {
+    "name": "gobject near",
+    "security": 3,
+    "syntax": ".gobject near [#distance]",
+    "description": "Output gameobjects at distance #distance from player. Output gameobject guids and coordinates sorted by distance from character. If #distance not provided use 10 as default value."
+  },
+  {
+    "name": "gobject respawn",
+    "security": 1,
+    "syntax": ".gobject respawn #guid",
+    "description": "Respwans the target gameobject"
+  },
+  {
+    "name": "gobject set",
+    "security": 3,
+    "syntax": ".gobject set",
+    "description": ""
+  },
+  {
+    "name": "gobject set phase",
+    "security": 3,
+    "syntax": ".gobject set phase #guid #phasemask",
+    "description": "Gameobject with DB guid #guid phasemask changed to #phasemask with related world vision update for players. Gameobject state saved to DB and persistent."
+  },
+  {
+    "name": "gobject set state",
+    "security": 3,
+    "syntax": "",
+    "description": ""
+  },
+  {
+    "name": "gobject spawngroup",
+    "security": 3,
+    "syntax": ".gobject spawngroup #groupId",
+    "description": "Spawns all gameobjects in the given spawn group."
+  },
+  {
+    "name": "gobject target",
+    "security": 1,
+    "syntax": ".gobject target [#go_id\\#go_name_part]",
+    "description": "Locate and show position nearest gameobject. If #go_id or #go_name_part provide then locate and show position of nearest gameobject with gameobject template id #go_id or name included #go_name_part as part."
+  },
+  {
+    "name": "gobject turn",
+    "security": 3,
+    "syntax": ".gobject turn #goguid",
+    "description": "Set for gameobject #goguid orientation same as current character orientation."
+  },
+  {
+    "name": "gobject",
+    "security": 2,
+    "syntax": ".gobject $subcommand",
+    "description": "Type .gobject to see the list of possible subcommands or .help gobject $subcommand to see info on subcommands"
+  },
+  {
+    "name": "gps",
+    "security": 1,
+    "syntax": ".gps [$name\\$shift-link]",
+    "description": "Display the position information for a selected character or creature (also if player name $name provided then for named player, or if creature/gameobject shift-link provided then pointed creature/gameobject if it loaded). Position information includes X, Y, Z, and orientation, map Id and zone Id"
+  },
+  {
+    "name": "group disband",
+    "security": 2,
+    "syntax": ".group disband [$characterName]",
+    "description": "Disbands the given character's group."
+  },
+  {
+    "name": "group join",
+    "security": 2,
+    "syntax": ".group join $AnyCharacterNameFromGroup [$CharacterName]",
+    "description": "Adds to group of player $AnyCharacterNameFromGroup player $CharacterName (or selected)."
+  },
+  {
+    "name": "group leader",
+    "security": 2,
+    "syntax": ".group leader [$characterName]",
+    "description": "Sets the given character as his group's leader."
+  },
+  {
+    "name": "group list",
+    "security": 2,
+    "syntax": ".group list [$CharacterName]",
+    "description": "Lists all the members of the group/party the player is in."
+  },
+  {
+    "name": "group revive",
+    "security": 2,
+    "syntax": ".group revive $characterName",
+    "description": "Revives all group members of the given character or self if not provided."
+  },
+  {
+    "name": "group remove",
+    "security": 2,
+    "syntax": ".group remove [$characterName]",
+    "description": "Removes the given character from his group."
+  },
+  {
+    "name": "group",
+    "security": 2,
+    "syntax": ".group $subcommand",
+    "description": "Type .group to see the list of possible subcommands or .help group $subcommand to see info on subcommands"
+  },
+  {
+    "name": "groupsummon",
+    "security": 2,
+    "syntax": ".groupsummon [$charactername]",
+    "description": "Teleport the given character and his group to you. Teleported only online characters but original selected group member can be offline."
+  },
+  {
+    "name": "guid",
+    "security": 2,
+    "syntax": ".guid",
+    "description": "Display the GUID for the selected character."
+  },
+  {
+    "name": "guild create",
+    "security": 2,
+    "syntax": ".guild create [$GuildLeaderName] \"$GuildName\"",
+    "description": "Create a guild named $GuildName with the player $GuildLeaderName (or selected) as leader. Guild name must in quotes."
+  },
+  {
+    "name": "guild delete",
+    "security": 2,
+    "syntax": ".guild delete \"$GuildName\"",
+    "description": "Delete guild $GuildName. Guild name must in quotes."
+  },
+  {
+    "name": "guild info",
+    "security": 2,
+    "syntax": ".guild info",
+    "description": "Shows information about the target's guild or a given Guild Id or Name."
+  },
+  {
+    "name": "guild invite",
+    "security": 2,
+    "syntax": ".guild invite [$CharacterName] \"$GuildName\"",
+    "description": "Add player $CharacterName (or selected) into a guild $GuildName. Guild name must in quotes."
+  },
+  {
+    "name": "guild rank",
+    "security": 2,
+    "syntax": ".guild rank [$CharacterName] #RankNumber",
+    "description": "Set for player $CharacterName (or selected) rank #Rank in a guild. Ranks value are numeric, 0 = Guild Master, 1 = Officer, etc..."
+  },
+  {
+    "name": "guild rename",
+    "security": 2,
+    "syntax": ".guild rename \"$GuildName\" \"$NewGuildName\"",
+    "description": "Rename a guild named $GuildName with $NewGuildName. Guild name and new guild name must in quotes."
+  },
+  {
+    "name": "guild uninvite",
+    "security": 2,
+    "syntax": ".guild uninvite [$CharacterName]",
+    "description": "Remove player $CharacterName (or selected) from a guild."
+  },
+  {
+    "name": "guild",
+    "security": 2,
+    "syntax": ".guild $subcommand",
+    "description": "Type .guild to see the list of possible subcommands or .help guild $subcommand to see info on subcommands"
+  },
+  {
+    "name": "help",
+    "security": 0,
+    "syntax": ".help [$command]",
+    "description": "Display usage instructions for the given $command. If no $command provided show list available commands."
+  },
+  {
+    "name": "hidearea",
+    "security": 3,
+    "syntax": ".hidearea #areaid",
+    "description": "Hide the area of #areaid to the selected character. If no character is selected, hide this area to you."
+  },
+  {
+    "name": "honor add kill NOT IMPLEMENTED",
+    "security": 2,
+    "syntax": "gi.honor add kill",
+    "description": "Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)"
+  },
+  {
+    "name": "honor add",
+    "security": 2,
+    "syntax": ".honor add $amount",
+    "description": "Add a certain amount of honor (gained today) to the selected player."
+  },
+  {
+    "name": "honor add kill",
+    "security": 2,
+    "syntax": ".honor add kill",
+    "description": "Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)."
+  },
+  {
+    "name": "honor update",
+    "security": 2,
+    "syntax": ".honor update",
+    "description": "Force the yesterday's honor fields to be updated with today's data, which will get reset for the selected player."
+  },
+  {
+    "name": "honor",
+    "security": 2,
+    "syntax": ".honor $subcommand",
+    "description": "Type .honor to see the list of possible subcommands or .help honor $subcommand to see info on subcommands"
+  },
+  {
+    "name": "instance getbossstate",
+    "security": 1,
+    "syntax": ".instance getbossstate $bossId [$Name]",
+    "description": "Gets the current EncounterState for the provided boss id. If no character name is provided, the current map will be used as target."
+  },
+  {
+    "name": "instance listbinds",
+    "security": 1,
+    "syntax": ".instance listbinds",
+    "description": "Lists the binds of the selected player."
+  },
+  {
+    "name": "instance savedata",
+    "security": 3,
+    "syntax": ".instance savedata",
+    "description": "Save the InstanceData for the current player's map to the DB."
+  },
+  {
+    "name": "instance setbossstate",
+    "security": 2,
+    "syntax": ".instance setbossstate $bossId $encounterState [$Name]",
+    "description": "Sets the EncounterState for the given boss id to a new value. EncounterStates range from 0 to 5. If no character name is provided, the current map will be used as target."
+  },
+  {
+    "name": "instance stats",
+    "security": 1,
+    "syntax": ".instance stats",
+    "description": "Shows statistics about instances."
+  },
+  {
+    "name": "instance unbind",
+    "security": 2,
+    "syntax": ".instance unbind <mapid\\all> [difficulty]",
+    "description": "Clear all/some of player's binds"
+  },
+  {
+    "name": "instance",
+    "security": 1,
+    "syntax": ".instance $subcommand",
+    "description": "Type .instance to see the list of possible subcommands or .help instance $subcommand to see info on subcommands"
+  },
+  {
+    "name": "item move",
+    "security": 2,
+    "syntax": ".itemmove #sourceslotid #destinationslotid",
+    "description": "Move an item from slots #sourceslotid to #destinationslotid in your inventory Not yet implemented"
+  },
+  {
+    "name": "inventory",
+    "security": 1,
+    "syntax": ".inventory $subcommand",
+    "description": "Type .inventory to see the list of possible subcommands or .help inventory $subcommand to see info on subcommands."
+  },
+  {
+    "name": "inventory count",
+    "security": 1,
+    "syntax": ".inventory count $playerName or $playerGuid",
+    "description": "Count free slots in bags divided into different bag types."
+  },
+  {
+    "name": "item refund",
+    "security": 3,
+    "syntax": ".item refund",
+    "description": "Removes the item and restores honor/arena/items according to extended cost."
+  },
+  {
+    "name": "item restore",
+    "security": 2,
+    "syntax": ".item restore [#recoveryItemId] [#playername]",
+    "description": "Restore an disposed item for the specified player."
+  },
+  {
+    "name": "item restore list",
+    "security": 2,
+    "syntax": ".item restore list [#playername]",
+    "description": "See restorable items for the specified player."
+  },
+  {
+    "name": "kick",
+    "security": 2,
+    "syntax": ".kick [$charactername] [$reason]",
+    "description": "Kick the given character name from the world with or without reason. If no character name is provided then the selected player (except for yourself) will be kicked. If no reason is provided, default is \"No Reason\"."
+  },
+  {
+    "name": "learn all",
+    "security": 2,
+    "syntax": ".learn all $subcommand",
+    "description": "Type .learn all to see the list of possible subcommands or .help learn all $subcommand to see info on subcommands."
+  },
+  {
+    "name": "learn all crafts",
+    "security": 2,
+    "syntax": ".learn crafts",
+    "description": "Learn all professions and recipes."
+  },
+  {
+    "name": "learn all default",
+    "security": 2,
+    "syntax": ".learn all default [$playername]",
+    "description": "Learn for selected/$playername player all default spells for his race/class and spells rewarded by completed quests."
+  },
+  {
+    "name": "learn all gm",
+    "security": 2,
+    "syntax": ".learn all gm",
+    "description": "Learn all default spells for Game Masters."
+  },
+  {
+    "name": "learn all lang",
+    "security": 2,
+    "syntax": ".learn all lang",
+    "description": "Learn all languages"
+  },
+  {
+    "name": "learn all my",
+    "security": 2,
+    "syntax": ".learn all my $subcommand",
+    "description": "Type .learn all my to see the list of possible subcommands or .help learn all my $subcommand to see info on subcommands."
+  },
+  {
+    "name": "learn all my class",
+    "security": 2,
+    "syntax": ".learn all my class",
+    "description": "Learn all spells and talents available for his class."
+  },
+  {
+    "name": "learn all my pettalents",
+    "security": 2,
+    "syntax": ".learn all my pettalents",
+    "description": "Learn all talents for your pet available for his creature type (only for hunter pets)."
+  },
+  {
+    "name": "learn all my quest",
+    "security": 2,
+    "syntax": ".learn all my quest",
+    "description": "Learn all spells rewarded from quest for your class."
+  },
+  {
+    "name": "learn all my spells",
+    "security": 2,
+    "syntax": ".learn all my spells",
+    "description": "Learn all spells (except talents and spells with first rank learned as talent) available for his class."
+  },
+  {
+    "name": "learn all my talents",
+    "security": 2,
+    "syntax": ".learn all my talents",
+    "description": "Learn all talents (and spells with first rank learned as talent) available for his class."
+  },
+  {
+    "name": "learn all my trainer",
+    "security": 2,
+    "syntax": ".learn all my trainer",
+    "description": "Learn all spells taught by trainers for your class."
+  },
+  {
+    "name": "learn all recipes",
+    "security": 2,
+    "syntax": ".learn all recipes [$profession]",
+    "description": "Learns all recipes of specified profession and sets skill level to max. Example: .learn all recipes enchanting"
+  },
+  {
+    "name": "learn",
+    "security": 2,
+    "syntax": ".learn #spell [all]",
+    "description": "Selected character learn a spell of id #spell. If 'all' provided then all ranks learned."
+  },
+  {
+    "name": "levelup",
+    "security": 2,
+    "syntax": ".levelup [$playername] [#numberoflevels]",
+    "description": "Increase/decrease the level of character with $playername (or the selected if not name provided) by #numberoflevels Or +1 if no #numberoflevels provided). If #numberoflevels is omitted, the level will be increase by 1. If #numberoflevels is 0, the same level will be restarted. If no character is selected and name not provided, increase your level. Command can be used for offline character. All stats and dependent values recalculated. At level decrease talents can be reset if need. Also at level decrease equipped items with greater level requirement can be lost."
+  },
+  {
+    "name": "lfg",
+    "security": 1,
+    "syntax": ".lfg $subcommand",
+    "description": "Type .lfg to see the list of possible subcommands or .help lfg $subcommand to see info on subcommands."
+  },
+  {
+    "name": "lfg clean",
+    "security": 3,
+    "syntax": ".lfg clean",
+    "description": "Cleans current queue, only for debugging purposes."
+  },
+  {
+    "name": "lfg cooldown",
+    "security": 3,
+    "syntax": ".lfg cooldown",
+    "description": "Clears all LFG dungeon cooldowns for all players."
+  },
+  {
+    "name": "lfg group",
+    "security": 1,
+    "syntax": ".lfg group",
+    "description": "Shows information about all players in the group (state, roles, comment, dungeons selected)."
+  },
+  {
+    "name": "lfg options",
+    "security": 2,
+    "syntax": ".lfg options [new value]",
+    "description": "Shows current lfg options. New value is set if extra param is present."
+  },
+  {
+    "name": "lfg player",
+    "security": 1,
+    "syntax": ".lfg player",
+    "description": "Shows information about player (state, roles, comment, dungeons selected)."
+  },
+  {
+    "name": "lfg queue",
+    "security": 1,
+    "syntax": ".lfg queue",
+    "description": "Shows info about current lfg queues."
+  },
+  {
+    "name": "linkgrave",
+    "security": 3,
+    "syntax": ".linkgrave #graveyard_id [alliance\\horde]",
+    "description": "Link current zone to graveyard for any (or alliance/horde faction ghosts). This let character ghost from zone teleport to graveyard after die if graveyard is nearest from linked to zone and accept ghost of this faction. Add only single graveyard at another map and only if no graveyards linked (or planned linked at same map)."
+  },
+  {
+    "name": "list auras",
+    "security": 1,
+    "syntax": ".list auras",
+    "description": "List auras (passive and active) of selected creature or player. If no creature or player is selected, list your own auras."
+  },
+  {
+    "name": "list auras id",
+    "security": 1,
+    "syntax": ".list auras id",
+    "description": "Lists all active auras on the selected unit by spell ID."
+  },
+  {
+    "name": "list auras name",
+    "security": 1,
+    "syntax": ".list auras name",
+    "description": "Lists all active auras on the selected unit by spell name."
+  },
+  {
+    "name": "list creature",
+    "security": 1,
+    "syntax": ".list creature #creature_id [#max_count]",
+    "description": "Output creatures with creature id #creature_id found in world. Output creature guids and coordinates sorted by distance from character. Will be output maximum #max_count creatures. If #max_count not provided use 10 as default value."
+  },
+  {
+    "name": "list gobject",
+    "security": 1,
+    "syntax": ".list gobject #gameobject_id [#max_count]",
+    "description": "Output gameobjects with gameobject id #gameobject_id found in world. Output gameobject guids and coordinates sorted by distance from character. Will be output maximum #max_count gameobject. If #max_count not provided use 10 as default value."
+  },
+  {
+    "name": "list item",
+    "security": 1,
+    "syntax": ".list item #item_id [#max_count]",
+    "description": "Output items with item id #item_id found in all character inventories, mails, auctions, and guild banks. Output item guids, item owner guid, owner account and owner name (guild name and guid in case guild bank). Will be output maximum #max_count items. If #max_count not provided use 10 as default value."
+  },
+  {
+    "name": "list object",
+    "security": 1,
+    "syntax": ".list object #object_guid",
+    "description": "[DEPRECATED] Use \".list gobject\" instead."
+  },
+  {
+    "name": "list respawns",
+    "security": 2,
+    "syntax": ".list respawns",
+    "description": "Shows all pending creature and gameobject respawns on the current map."
+  },
+  {
+    "name": "list",
+    "security": 1,
+    "syntax": ".list $subcommand",
+    "description": "Type .list to see the list of possible subcommands or .help list $subcommand to see info on subcommands"
+  },
+  {
+    "name": "lookup area",
+    "security": 1,
+    "syntax": ".lookup area $namepart",
+    "description": "Looks up an area by $namepart, and returns all matches with their area ID's."
+  },
+  {
+    "name": "lookup creature",
+    "security": 1,
+    "syntax": ".lookup creature $namepart",
+    "description": "Looks up a creature by $namepart, and returns all matches with their creature ID's."
+  },
+  {
+    "name": "lookup event",
+    "security": 1,
+    "syntax": ".lookup event $name",
+    "description": "Attempts to find the ID of the event with the provided $name."
+  },
+  {
+    "name": "lookup faction",
+    "security": 1,
+    "syntax": ".lookup faction $name",
+    "description": "Attempts to find the ID of the faction with the provided $name."
+  },
+  {
+    "name": "lookup gobject",
+    "security": 1,
+    "syntax": ".lookup gobject $objname",
+    "description": "Return gameobject(s) ID matching $objname."
+  },
+  {
+    "name": "lookup item",
+    "security": 1,
+    "syntax": ".lookup item $itemname",
+    "description": "Looks up an item by $itemname, and returns all matches with their Item ID's."
+  },
+  {
+    "name": "lookup item set",
+    "security": 1,
+    "syntax": ".lookup itemset $itemname",
+    "description": "Looks up an item set by $itemname, and returns all matches with their Item set ID's."
+  },
+  {
+    "name": "lookup itemset",
+    "security": 1,
+    "syntax": ".lookup itemset $itemname",
+    "description": "Looks up an item set by $itemname, and returns all matches with their Item set ID's."
+  },
+  {
+    "name": "lookup map",
+    "security": 1,
+    "syntax": ".lookup map $namepart",
+    "description": "Looks up a map by $namepart, and returns all matches with their map ID's."
+  },
+  {
+    "name": "lookup object",
+    "security": 1,
+    "syntax": ".lookup object",
+    "description": "[DEPRECATED] Use \".lookup gobject\" instead."
+  },
+  {
+    "name": "lookup player",
+    "security": 2,
+    "syntax": ".lookup player $subcommand",
+    "description": "Type .lookup player to see the list of possible subcommands or .help lookup player $subcommand to see info on subcommands."
+  },
+  {
+    "name": "lookup player account",
+    "security": 2,
+    "syntax": ".lookup player account $account ($limit)",
+    "description": "Searchs players, which account username is $account with optional parametr $limit of results."
+  },
+  {
+    "name": "lookup player email",
+    "security": 2,
+    "syntax": ".lookup player email $email ($limit)",
+    "description": "Searchs players, which account email is $email with optional parametr $limit of results."
+  },
+  {
+    "name": "lookup player ip",
+    "security": 2,
+    "syntax": ".lookup player ip $ip ($limit)",
+    "description": "Searchs players, which account ast_ip is $ip with optional parametr $limit of results."
+  },
+  {
+    "name": "lookup quest",
+    "security": 1,
+    "syntax": ".lookup quest $namepart",
+    "description": "Looks up a quest by $namepart, and returns all matches with their quest ID's."
+  },
+  {
+    "name": "lookup skill",
+    "security": 1,
+    "syntax": ".lookup skill $$namepart",
+    "description": "Looks up a skill by $namepart, and returns all matches with their skill ID's."
+  },
+  {
+    "name": "lookup spell id",
+    "security": 1,
+    "syntax": ".lookup spell id #spellid",
+    "description": "Looks up a spell by #spellid, and returns the match with its spell name."
+  },
+  {
+    "name": "lookup spell",
+    "security": 1,
+    "syntax": ".lookup spell $namepart",
+    "description": "Looks up a spell by $namepart, and returns all matches with their spell ID's."
+  },
+  {
+    "name": "lookup taxinode",
+    "security": 1,
+    "syntax": ".lookup taxinode $substring",
+    "description": "Search and output all taxinodes with provide $substring in name."
+  },
+  {
+    "name": "lookup teleport",
+    "security": 1,
+    "syntax": ".lookup teleport $substring",
+    "description": "Search and output all .teleport command locations with provide $substring in name."
+  },
+  {
+    "name": "lookup title",
+    "security": 1,
+    "syntax": ".lookup title $$namepart",
+    "description": "Looks up a title by $namepart, and returns all matches with their title ID's and index's."
+  },
+  {
+    "name": "lookup",
+    "security": 1,
+    "syntax": ".lookup $subcommand",
+    "description": "Type .lookup to see the list of possible subcommands or .help lookup $subcommand to see info on subcommands"
+  },
+  {
+    "name": "mail",
+    "security": 2,
+    "syntax": ".mail $subcommand",
+    "description": "Type .mail to see a list of subcommands or .help mail $subcommand to see info on subcommands."
+  },
+  {
+    "name": "mail list",
+    "security": 2,
+    "syntax": ".mail list [$player]",
+    "description": "Displays all mail data (except subject and body) for the target player."
+  },
+  {
+    "name": "mail return",
+    "security": 2,
+    "syntax": ".mail return $player $mailId",
+    "description": "Returns the specified mail to its original sender."
+  },
+  {
+    "name": "mailbox",
+    "security": 1,
+    "syntax": ".mailbox",
+    "description": "Open mailbox."
+  },
+  {
+    "name": "maxskill",
+    "security": 2,
+    "syntax": ".maxskill",
+    "description": "Sets all skills of the targeted player to their maximum values for its current level."
+  },
+  {
+    "name": "mmap",
+    "security": 3,
+    "syntax": ".mmap $subcommand",
+    "description": "Type .mmap to see the list of possible subcommands or .help mmap $subcommand to see info on subcommands."
+  },
+  {
+    "name": "mmap loadedtiles",
+    "security": 3,
+    "syntax": ".mmap loadedtiles",
+    "description": "To show which tiles are currently loaded."
+  },
+  {
+    "name": "mmap loc",
+    "security": 3,
+    "syntax": ".mmap loc",
+    "description": "To print on which tile one is."
+  },
+  {
+    "name": "mmap path",
+    "security": 3,
+    "syntax": ".mmap path",
+    "description": "To calculate and show a path to current select unit."
+  },
+  {
+    "name": "mmap stats",
+    "security": 3,
+    "syntax": ".mmap stats",
+    "description": "To show information about current state of mmaps."
+  },
+  {
+    "name": "mmap testarea",
+    "security": 3,
+    "syntax": ".mmap testarea",
+    "description": "To calculate paths for all nearby npcs to player."
+  },
+  {
+    "name": "modify arenapoints",
+    "security": 1,
+    "syntax": ".modify arenapoints #value",
+    "description": "Add $amount arena points to the selected player."
+  },
+  {
+    "name": "modify bit",
+    "security": 2,
+    "syntax": ".modify bit #field #bit",
+    "description": "Toggle the #bit bit of the #field field for the selected player. If no player is selected, modify your character."
+  },
+  {
+    "name": "modify drunk",
+    "security": 2,
+    "syntax": ".modify drunk #value",
+    "description": "Set drunk level to #value (0..100). Value 0 remove drunk state, 100 is max drunked state."
+  },
+  {
+    "name": "modify energy",
+    "security": 2,
+    "syntax": ".modify energy #energy",
+    "description": "Modify the energy of the selected player. If no player is selected, modify your energy."
+  },
+  {
+    "name": "modify faction",
+    "security": 3,
+    "syntax": ".modify faction #factionid #flagid #npcflagid #dynamicflagid",
+    "description": "Modify the faction and flags of the selected creature. Without arguments, display the faction and flags of the selected creature."
+  },
+  {
+    "name": "modify gender",
+    "security": 2,
+    "syntax": ".modify gender male/female",
+    "description": "Change gender of selected player."
+  },
+  {
+    "name": "modify honor",
+    "security": 2,
+    "syntax": ".modify honor $amount",
+    "description": "Add $amount honor points to the selected player."
+  },
+  {
+    "name": "modify hp",
+    "security": 2,
+    "syntax": ".modify hp #newhp",
+    "description": "Modify the hp of the selected player. If no player is selected, modify your hp."
+  },
+  {
+    "name": "modify mana",
+    "security": 2,
+    "syntax": ".modify mana #newmana",
+    "description": "Modify the mana of the selected player. If no player is selected, modify your mana."
+  },
+  {
+    "name": "modify money",
+    "security": 2,
+    "syntax": ".modify money #money",
+    "description": "Add or remove money to the selected player. If no player is selected, modify your money. #gold can be negative to remove money."
+  },
+  {
+    "name": "modify mount",
+    "security": 2,
+    "syntax": ".modify mount #id #speed",
+    "description": "Display selected player as mounted at #id creature and set speed to #speed value."
+  },
+  {
+    "name": "modify phase",
+    "security": 2,
+    "syntax": ".modify phase #phasemask",
+    "description": "Selected character phasemask changed to #phasemask with related world vision update. Change active until in game phase changed, or GM-mode enable/disable, or re-login. Character pts pasemask update to same value."
+  },
+  {
+    "name": "modify rage",
+    "security": 2,
+    "syntax": ".modify rage #newrage",
+    "description": "Modify the rage of the selected player. If no player is selected, modify your rage."
+  },
+  {
+    "name": "modify reputation",
+    "security": 2,
+    "syntax": ".modify reputation #repId (#repvalue \\ $rankname [#delta])",
+    "description": "Sets the selected players reputation with faction #repId to #repvalue or to $reprank. If the reputation rank name is provided, the resulting reputation will be the lowest reputation for that rank plus the delta amount, if specified. You can use '.pinfo rep' to list all known reputation ids, or use '.lookup faction $name' to locate a specific faction id."
+  },
+  {
+    "name": "modify runicpower",
+    "security": 2,
+    "syntax": ".modify runicpower #newrunicpower",
+    "description": "Modify the runic power of the selected player. If no player is selected, modify your runic power."
+  },
+  {
+    "name": "modify scale",
+    "security": 2,
+    "syntax": ".modify scale #scale",
+    "description": "Modify size of the selected player or creature to \"normal scale\"*rate. If no player or creature is selected, modify your size. #rate may range from 0.1 to 10."
+  },
+  {
+    "name": "modify speed all",
+    "security": 2,
+    "syntax": ".modify speed #rate",
+    "description": "Modify all speeds -run,swim,run back,swim back- of the selected player to \"normalbase speed for this move type\"*rate. If no player is selected, modify your speed. #rate may range from 0.1 to 50."
+  },
+  {
+    "name": "modify speed backwalk",
+    "security": 2,
+    "syntax": ".modify speed backwalk #rate",
+    "description": "Modify the speed of the selected player while running backwards to \"normal walk back speed\"*rate. If no player is selected, modify your speed. #rate may range from 0.1 to 50."
+  },
+  {
+    "name": "modify speed fly",
+    "security": 2,
+    "syntax": ".modify speed fly #rate",
+    "description": "Modify the flying speed of the selected player to \"normal flying speed\"*rate. If no player is selected, modify your speed. #rate may range from 0.1 to 50."
+  },
+  {
+    "name": "modify speed swim",
+    "security": 2,
+    "syntax": ".modify speed swim #rate",
+    "description": "Modify the swim speed of the selected player to \"normal swim speed\"*rate. If no player is selected, modify your speed. #rate may range from 0.1 to 50."
+  },
+  {
+    "name": "modify speed walk",
+    "security": 2,
+    "syntax": ".modify speed bwalk #rate",
+    "description": "Modify the speed of the selected player while running to \"normal walk speed\"*rate. If no player is selected, modify your speed. #rate may range from 0.1 to 50."
+  },
+  {
+    "name": "modify speed",
+    "security": 2,
+    "syntax": ".modify speed $speedtype #rate",
+    "description": "Modify the running speed of the selected player to \"normal base run speed\"= 1. If no player is selected, modify your speed. $speedtypes may be fly, all, walk, backwalk, or swim. #rate may range from 0.1 to 50."
+  },
+  {
+    "name": "modify spell",
+    "security": 2,
+    "syntax": "",
+    "description": "TODO"
+  },
+  {
+    "name": "modify standstate",
+    "security": 2,
+    "syntax": ".modify standstate #emoteid",
+    "description": "Change the emote of your character while standing to #emoteid."
+  },
+  {
+    "name": "modify talentpoints",
+    "security": 2,
+    "syntax": ".modify talentpoints #amount",
+    "description": "Set free talent points for selected character or character's pet. It will be reset to default expected at next levelup/login/quest reward."
+  },
+  {
+    "name": "modify",
+    "security": 2,
+    "syntax": ".modify $subcommand",
+    "description": "Type .modify to see the list of possible subcommands or .help modify $subcommand to see info on subcommands"
+  },
+  {
+    "name": "morph mount",
+    "security": 1,
+    "syntax": ".morph mount #displayid",
+    "description": "Change the selected target's mount's model ID to #displayid."
+  },
+  {
+    "name": "morph reset",
+    "security": 1,
+    "syntax": ".morph reset",
+    "description": "Reset the original model for the selected target."
+  },
+  {
+    "name": "morph target",
+    "security": 1,
+    "syntax": ".morph target #displayid",
+    "description": "Change the selected target's current model id to #displayid."
+  },
+  {
+    "name": "morph",
+    "security": 1,
+    "syntax": ".morph #displayid",
+    "description": "Change your current model id to #displayid."
+  },
+  {
+    "name": "movegens",
+    "security": 3,
+    "syntax": ".movegens",
+    "description": "Show movement generators stack for selected creature or player."
+  },
+  {
+    "name": "mute",
+    "security": 2,
+    "syntax": ".mute [$playerName] $timeInMinutes [$reason]",
+    "description": "Disible chat messaging for any character from account of character $playerName (or currently selected) at $timeInMinutes minutes. Player can be offline."
+  },
+  {
+    "name": "mutehistory",
+    "security": 2,
+    "syntax": ".mutehistory #accountname",
+    "description": "Show mute history for account #accountname."
+  },
+  {
+    "name": "nameannounce",
+    "security": 2,
+    "syntax": ".nameannounce $announcement",
+    "description": "Send an announcement to all online players, displaying the name of the sender."
+  },
+  {
+    "name": "neargrave",
+    "security": 2,
+    "syntax": ".neargrave [alliance\\horde]",
+    "description": "Find nearest graveyard linked to zone (or only nearest from accepts alliance or horde faction ghosts)."
+  },
+  {
+    "name": "notify",
+    "security": 2,
+    "syntax": ".notify $MessageToBroadcast",
+    "description": "Send a global message to all players online in screen."
+  },
+  {
+    "name": "npc add formation",
+    "security": 3,
+    "syntax": ".npc add formation $leader",
+    "description": "Add selected creature to a leader's formation."
+  },
+  {
+    "name": "npc add item",
+    "security": 3,
+    "syntax": ".npc add item #itemId <#maxcount><#incrtime><#extendedcost>r",
+    "description": "Add item #itemid to item list of selected vendor. Also optionally set max count item in vendor item list and time to item count restoring and items ExtendedCost."
+  },
+  {
+    "name": "npc add move",
+    "security": 3,
+    "syntax": ".npc add move #creature_guid [#waittime]",
+    "description": "Add your current location as a waypoint for creature with guid #creature_guid. And optional add wait time."
+  },
+  {
+    "name": "npc add temp",
+    "security": 3,
+    "syntax": ".npc add temp",
+    "description": "Adds temporary NPC, not saved to database."
+  },
+  {
+    "name": "npc add",
+    "security": 3,
+    "syntax": ".npc add #creatureid",
+    "description": "Spawn a creature by the given template id of #creatureid."
+  },
+  {
+    "name": "npc delete item",
+    "security": 3,
+    "syntax": ".npc delete item #itemId",
+    "description": "Remove item #itemid from item list of selected vendor."
+  },
+  {
+    "name": "npc delete",
+    "security": 3,
+    "syntax": ".npc delete [#guid]",
+    "description": "Delete creature with guid #guid (or the selected if no guid is provided)"
+  },
+  {
+    "name": "npc do",
+    "security": 3,
+    "syntax": ".npc do $action",
+    "description": "Requests the NPC to perform DoAction with the specified ActionID. Used for testing scripts."
+  },
+  {
+    "name": "npc follow stop",
+    "security": 2,
+    "syntax": ".npc follow stop",
+    "description": "Selected creature (non pet) stop follow you."
+  },
+  {
+    "name": "npc follow",
+    "security": 2,
+    "syntax": ".npc follow start",
+    "description": "Selected creature start follow you until death/fight/etc."
+  },
+  {
+    "name": "npc guid",
+    "security": 1,
+    "syntax": ".npc guid",
+    "description": "Intended to display database GUID of targeted creature. Currently displays GUID, faction, NPC flags, Entry ID, Model ID for selected creature."
+  },
+  {
+    "name": "npc info",
+    "security": 1,
+    "syntax": ".npc info",
+    "description": "Display a list of details for the selected creature. The list includes: - GUID, Faction, NPC flags, Entry ID, Model ID, - Level, - Health (current/maximum), - Field flags, dynamic flags, faction template, - Position information, - and the creature type, e.g. if the creature is a vendor."
+  },
+  {
+    "name": "npc load",
+    "security": 3,
+    "syntax": ".npc load #spawnId",
+    "description": "Load a creature spawn from the database into the world by its GUID."
+  },
+  {
+    "name": "npc move",
+    "security": 3,
+    "syntax": ".npc move [#creature_guid]",
+    "description": "Move the targeted creature spawn point to your coordinates."
+  },
+  {
+    "name": "npc near",
+    "security": 2,
+    "syntax": ".npc near #distance",
+    "description": "Returns all database creature spawns in a given distance."
+  },
+  {
+    "name": "npc playemote",
+    "security": 3,
+    "syntax": ".npc playemote #emoteid",
+    "description": "Make the selected creature emote with an emote of id #emoteid."
+  },
+  {
+    "name": "npc say",
+    "security": 2,
+    "syntax": ".npc say $message",
+    "description": "Make selected creature say specified message."
+  },
+  {
+    "name": "npc set",
+    "security": 3,
+    "syntax": ".npc set $subcommand",
+    "description": "Type .npc set to see the list of possible subcommands or .help npc set $subcommand to see info on subcommands."
+  },
+  {
+    "name": "npc set allowmove",
+    "security": 3,
+    "syntax": ".npc set allowmove",
+    "description": "Enable or disable movement creatures in world. Not implemented."
+  },
+  {
+    "name": "npc set data",
+    "security": 3,
+    "syntax": ".npc set data $field $data",
+    "description": "Sets data for the selected creature. Used for testing Scripting"
+  },
+  {
+    "name": "npc set entry",
+    "security": 3,
+    "syntax": ".npc set entry $entry",
+    "description": "Switch selected creature with another entry from creature_template. - New creature.id value not saved to DB."
+  },
+  {
+    "name": "npc set faction original",
+    "security": 3,
+    "syntax": ".npc set faction original",
+    "description": "Revert the temporal faction of the selected creature."
+  },
+  {
+    "name": "npc set faction permanent",
+    "security": 3,
+    "syntax": ".npc set faction permanent #factionid",
+    "description": "Permanently set the faction of the selected creature to #factionid."
+  },
+  {
+    "name": "npc set faction temp",
+    "security": 3,
+    "syntax": ".npc set faction temp #factionid",
+    "description": "Temporarily set the faction of the selected creature to #factionid."
+  },
+  {
+    "name": "npc set flag",
+    "security": 3,
+    "syntax": ".npc set flag #npcflag",
+    "description": "Set the NPC flags of creature template of the selected creature and selected creature to #npcflag. NPC flags will applied to all creatures of selected creature template after server restart or grid unload/load."
+  },
+  {
+    "name": "npc set level",
+    "security": 3,
+    "syntax": ".npc set level #level",
+    "description": "Change the level of the selected creature to #level. #level may range from 1 to (CONFIG_MAX_PLAYER_LEVEL) + 3."
+  },
+  {
+    "name": "npc set link",
+    "security": 3,
+    "syntax": ".npc set link $creatureGUID",
+    "description": "Links respawn of selected creature to the condition that $creatureGUID defined is alive."
+  },
+  {
+    "name": "npc set model",
+    "security": 3,
+    "syntax": ".npc set model #displayid",
+    "description": "Change the model id of the selected creature to #displayid."
+  },
+  {
+    "name": "npc set movetype",
+    "security": 3,
+    "syntax": ".npc set movetype [#creature_guid] stay/random/way [NODEL]",
+    "description": "Set for creature pointed by #creature_guid (or selected if #creature_guid not provided) movement type and move it to respawn position (if creature alive). Any existing waypoints for creature will be removed from the database if you do not use NODEL. If the creature is dead then movement type will applied at creature respawn. Make sure you use NODEL, if you want to keep the waypoints."
+  },
+  {
+    "name": "npc set phase",
+    "security": 3,
+    "syntax": ".npc set phase #phasemask",
+    "description": "Selected unit or pet phasemask changed to #phasemask with related world vision update for players. In creature case state saved to DB and persistent. In pet case change active until in game phase changed for owner, owner re-login, or GM-mode enable/disable.."
+  },
+  {
+    "name": "npc set spawntime",
+    "security": 3,
+    "syntax": ".npc set spawntime #time",
+    "description": "Adjust spawntime of selected creature to time."
+  },
+  {
+    "name": "npc set wanderdistance",
+    "security": 3,
+    "syntax": ".npc set wanderdistance #dist",
+    "description": "Adjust wanderdistance of selected creature to dist."
+  },
+  {
+    "name": "npc showloot",
+    "security": 2,
+    "syntax": ".npc showloot",
+    "description": "Shows the loot generated on the selected creature's corpse."
+  },
+  {
+    "name": "npc despawngroup",
+    "security": 3,
+    "syntax": ".npc despawngroup #groupId",
+    "description": "Despawns all creatures in the given spawn group."
+  },
+  {
+    "name": "npc spawngroup",
+    "security": 3,
+    "syntax": ".npc spawngroup #groupId",
+    "description": "Spawns all creatures in the given spawn group."
+  },
+  {
+    "name": "npc tame",
+    "security": 2,
+    "syntax": ".npc tame",
+    "description": "Tame the selected creature (if it is tameable)."
+  },
+  {
+    "name": "npc textemote",
+    "security": 2,
+    "syntax": ".npc textemote #emoteid",
+    "description": "Make the selected creature to do textemote with an emote of id #emoteid."
+  },
+  {
+    "name": "npc whisper",
+    "security": 2,
+    "syntax": ".npc whisper #playerguid #text",
+    "description": "Make the selected npc whisper #text to #playerguid."
+  },
+  {
+    "name": "npc yell",
+    "security": 2,
+    "syntax": ".npc yell $message",
+    "description": "Make selected creature yell specified message."
+  },
+  {
+    "name": "npc",
+    "security": 2,
+    "syntax": ".npc $subcommand",
+    "description": "Type .npc to see the list of possible subcommands or .help npc $subcommand to see info on subcommands"
+  },
+  {
+    "name": "opendoor",
+    "security": 1,
+    "syntax": ".opendoor [$range]",
+    "description": "Opens the nearest door within the range provided (default 5.0yd)"
+  },
+  {
+    "name": "packetlog",
+    "security": 2,
+    "syntax": ".packetlog [on/off]",
+    "description": "Toggles packet logging for the character. PacketLogFile needs to be set with a valid filename."
+  },
+  {
+    "name": "pdump load",
+    "security": 3,
+    "syntax": ".pdump load $filename $account [$newname] [$newguid]",
+    "description": "Load character dump from dump file into character list of $account with saved or $newname, with saved (or first free) or $newguid guid."
+  },
+  {
+    "name": "pdump write",
+    "security": 3,
+    "syntax": ".pdump write $filename $playerNameOrGUID",
+    "description": "Write character dump with name/guid $playerNameOrGUID to file $filename."
+  },
+  {
+    "name": "pdump",
+    "security": 3,
+    "syntax": ".pdump $subcommand",
+    "description": "Type .pdump to see the list of possible subcommands or .help pdump $subcommand to see info on subcommands"
+  },
+  {
+    "name": "pet create",
+    "security": 2,
+    "syntax": ".pet create",
+    "description": "Creates a pet of the selected creature."
+  },
+  {
+    "name": "pet delete",
+    "security": 3,
+    "syntax": ".pet delete $ownerName/#GUID $petNumber",
+    "description": "Deletes a specific pet (by its list number from.pet list) from the database for the given player name or GUID, unsummoning it first if currently active."
+  },
+  {
+    "name": "pet learn",
+    "security": 2,
+    "syntax": ".pet learn",
+    "description": "Learn #spellid to pet."
+  },
+  {
+    "name": "pet list",
+    "security": 1,
+    "syntax": ".pet list $ownerName/#GUID",
+    "description": "Lists all pets stored in the database for the given player name or GUID, showing each pet's number, name, entry, level, and slot."
+  },
+  {
+    "name": "pet unlearn",
+    "security": 2,
+    "syntax": ".pet unlean",
+    "description": "unLearn #spellid to pet."
+  },
+  {
+    "name": "pet",
+    "security": 2,
+    "syntax": ".pet $subcommand",
+    "description": "Type .pet to see the list of possible subcommands or .help pet $subcommand to see info on subcommands"
+  },
+  {
+    "name": "pinfo",
+    "security": 2,
+    "syntax": ".pinfo [$player_name/#GUID]",
+    "description": "Output account information for selected player or player find by $player_name or #GUID."
+  },
+  {
+    "name": "playall",
+    "security": 2,
+    "syntax": ".playall #soundid",
+    "description": "Player a sound to whole server."
+  },
+  {
+    "name": "player learn",
+    "security": 2,
+    "syntax": ".player learn #playername #spell [all]",
+    "description": "Learn spell #spell for the specified player. If 'all' is added then all ranks are learned."
+  },
+  {
+    "name": "player unlearn",
+    "security": 2,
+    "syntax": ".player unlearn #playername #spell [all]",
+    "description": "Unlearn spell #spell for the specified player. If 'all' is added then all ranks are unlearned."
+  },
+  {
+    "name": "pooltools",
+    "security": 3,
+    "syntax": ".pooltools $subcommand",
+    "description": "Type .pooltools to see the list of possible subcommands. To use pooltools, uncomment Appender.Dev and Logger.sql.dev in the worldserver config."
+  },
+  {
+    "name": "pooltools start",
+    "security": 3,
+    "syntax": ".pooltools start #description",
+    "description": "Starts a pooling session with the specified description."
+  },
+  {
+    "name": "pooltools def",
+    "security": 3,
+    "syntax": ".pooltools def #GameobjectID #Chance #GameobjectID #Chance (...)",
+    "description": "Defines the Gameobject entries to be detected along with their associated chances."
+  },
+  {
+    "name": "pooltools add",
+    "security": 3,
+    "syntax": ".pooltools add [radius]",
+    "description": "Adds nearby gameobjects to the pooling session. Default radius is 5y."
+  },
+  {
+    "name": "pooltools end",
+    "security": 3,
+    "syntax": ".pooltools end",
+    "description": "Logs the current pooling session and clears it."
+  },
+  {
+    "name": "pooltools remove",
+    "security": 3,
+    "syntax": ".pooltools remove",
+    "description": "Removes the last group from the pooling session."
+  },
+  {
+    "name": "pooltools clear",
+    "security": 3,
+    "syntax": ".pooltools clear",
+    "description": "Clears the current pooling session."
+  },
+  {
+    "name": "possess",
+    "security": 2,
+    "syntax": ".possess",
+    "description": "Possesses indefinitely the selected creature."
+  },
+  {
+    "name": "quest add",
+    "security": 2,
+    "syntax": ".quest add #quest_id",
+    "description": "Add to character quest log quest #quest_id. Quest started from item can't be added by this command but correct .additem call provided in command output."
+  },
+  {
+    "name": "quest complete",
+    "security": 2,
+    "syntax": ".quest complete #questid",
+    "description": "Mark all quest objectives as completed for target character active quest. After this target character can go and get quest reward."
+  },
+  {
+    "name": "quest remove",
+    "security": 2,
+    "syntax": ".quest remove #quest_id",
+    "description": "Set quest #quest_id state to not completed and not active (and remove from active quest list) for selected player."
+  },
+  {
+    "name": "quest reward",
+    "security": 2,
+    "syntax": ".quest reward #questId",
+    "description": "Grants quest reward to selected player and removes quest from his log (quest must be in completed state)."
+  },
+  {
+    "name": "quest status",
+    "security": 2,
+    "syntax": ".quest status $id [$name]",
+    "description": "Displays the selected player's status for the specified quest."
+  },
+  {
+    "name": "quest",
+    "security": 2,
+    "syntax": ".quest $subcommand",
+    "description": "Type .quest to see the list of possible subcommands or .help quest $subcommand to see info on subcommands"
+  },
+  {
+    "name": "recall",
+    "security": 2,
+    "syntax": ".recall [$playername]",
+    "description": "Teleport $playername or selected player to the place where he has been before last use of a teleportation command. If no $playername is entered and no player is selected, it will teleport you."
+  },
+  {
+    "name": "reload access_requirement",
+    "security": 3,
+    "syntax": ".reload access_requirement",
+    "description": "Reload access_requirement table."
+  },
+  {
+    "name": "reload achievement_reward_locale",
+    "security": 3,
+    "syntax": ".reload achievement_reward_locale",
+    "description": "Reload achievement_reward_locale table."
+  },
+  {
+    "name": "reload achievement_reward",
+    "security": 3,
+    "syntax": ".reload achievement_reward",
+    "description": "Reload achievement_reward table."
+  },
+  {
+    "name": "reload acore_string",
+    "security": 3,
+    "syntax": ".reload acore_string",
+    "description": "Reload acore_string table."
+  },
+  {
+    "name": "reload achievement_criteria_data",
+    "security": 3,
+    "syntax": ".reload achievement_criteria_data",
+    "description": "Reload achievement_criteria_data table."
+  },
+  {
+    "name": "reload all achievement",
+    "security": 3,
+    "syntax": ".reload all achievement",
+    "description": "Reload achievement_reward, achievement_criteria_data tables."
+  },
+  {
+    "name": "reload all area",
+    "security": 3,
+    "syntax": ".reload all area",
+    "description": "Reload areatrigger_teleport, areatrigger_tavern, game_graveyard_zone tables."
+  },
+  {
+    "name": "reload all gossips",
+    "security": 3,
+    "syntax": ".reload all gossips",
+    "description": "Reload gossip_menu, gossip_menu_option, gossip_scripts, points_of_interest tables."
+  },
+  {
+    "name": "reload all item",
+    "security": 3,
+    "syntax": ".reload all item",
+    "description": "Reload page_text, item_enchantment_table tables."
+  },
+  {
+    "name": "reload all locales",
+    "security": 3,
+    "syntax": ".reload all locales",
+    "description": "Reload all locales_* tables with reload support added and that can be safe reloaded."
+  },
+  {
+    "name": "reload all loot",
+    "security": 3,
+    "syntax": ".reload all loot",
+    "description": "Reload all *_loot_template tables. This can be slow operation with lags for server run."
+  },
+  {
+    "name": "reload all npc",
+    "security": 3,
+    "syntax": ".reload all npc",
+    "description": "Reload npc_option, npc_trainer, npc vendor, points of interest tables."
+  },
+  {
+    "name": "reload all quest",
+    "security": 3,
+    "syntax": ".reload all quest",
+    "description": "Reload all quest related tables if reload support added for this table and this table can be safe reloaded."
+  },
+  {
+    "name": "reload all scripts",
+    "security": 3,
+    "syntax": ".reload all scripts",
+    "description": "Reload gameobject_scripts, event_scripts, quest_end_scripts, quest_start_scripts, spell_scripts, db_script_string, waypoint_scripts tables."
+  },
+  {
+    "name": "reload all spell",
+    "security": 3,
+    "syntax": ".reload all spell",
+    "description": "Reload all spell_* tables with reload support added and that can be safe reloaded."
+  },
+  {
+    "name": "reload all",
+    "security": 3,
+    "syntax": ".reload all",
+    "description": "Reload all tables with reload support added and that can be safe reloaded."
+  },
+  {
+    "name": "reload antidos_opcode_policies",
+    "security": 3,
+    "syntax": ".reload antidos_opcode_policies",
+    "description": "Reload antidos_opcode_policies table."
+  },
+  {
+    "name": "reload areatrigger",
+    "security": 3,
+    "syntax": ".reload areatrigger",
+    "description": "Reload areatrigger table."
+  },
+  {
+    "name": "reload areatrigger_involvedrelation",
+    "security": 3,
+    "syntax": ".reload areatrigger_involvedrelation",
+    "description": "Reload areatrigger_involvedrelation table."
+  },
+  {
+    "name": "reload areatrigger_tavern",
+    "security": 3,
+    "syntax": ".reload areatrigger_tavern",
+    "description": "Reload areatrigger_tavern table."
+  },
+  {
+    "name": "reload areatrigger_teleport",
+    "security": 3,
+    "syntax": ".reload areatrigger_teleport",
+    "description": "Reload areatrigger_teleport table."
+  },
+  {
+    "name": "reload auctions",
+    "security": 3,
+    "syntax": ".reload auctions",
+    "description": "Reload dynamic data tables from the database."
+  },
+  {
+    "name": "reload autobroadcast",
+    "security": 3,
+    "syntax": ".reload autobroadcast",
+    "description": "Reload autobroadcast table."
+  },
+  {
+    "name": "reload battleground_template",
+    "security": 3,
+    "syntax": ".reload battleground_template",
+    "description": "Reload battleground_template table."
+  },
+  {
+    "name": "reload broadcast_text",
+    "security": 3,
+    "syntax": ".reload broadcast_text",
+    "description": "Reload broadcast_text table."
+  },
+  {
+    "name": "reload command",
+    "security": 3,
+    "syntax": ".reload command",
+    "description": "Reload command table."
+  },
+  {
+    "name": "reload conditions",
+    "security": 3,
+    "syntax": "",
+    "description": "Reload conditions table."
+  },
+  {
+    "name": "reload config",
+    "security": 3,
+    "syntax": ".reload config",
+    "description": "Reload config settings (by default stored in worldserver.conf). Not all settings can be change at reload: some new setting values will be ignored until restart, some values will applied with delay or only to new objects/maps, some values will explicitly rejected to change at reload."
+  },
+  {
+    "name": "reload chat_filter",
+    "security": 3,
+    "syntax": ".reload chat_filter",
+    "description": "Reload thechat_filter table."
+  },
+  {
+    "name": "reload creature_linked_respawn",
+    "security": 2,
+    "syntax": ".reload creature_linked_respawn",
+    "description": "Reload creature_linked_respawn table."
+  },
+  {
+    "name": "reload creature_loot_template",
+    "security": 3,
+    "syntax": ".reload creature_loot_template",
+    "description": "Reload creature_loot_template table."
+  },
+  {
+    "name": "reload creature_movement_override",
+    "security": 3,
+    "syntax": ".reload creature_movement_override",
+    "description": "Reload creature_movement_override table."
+  },
+  {
+    "name": "reload creature_onkill_reputation",
+    "security": 3,
+    "syntax": ".reload creature_onkill_reputation",
+    "description": "Reload creature_onkill_reputation table."
+  },
+  {
+    "name": "reload creature_questender",
+    "security": 3,
+    "syntax": ".reload creature_questender",
+    "description": "Reload creature_questender table."
+  },
+  {
+    "name": "reload creature_queststarter",
+    "security": 3,
+    "syntax": ".reload creature_queststarter",
+    "description": "Reload creature_queststarter table."
+  },
+  {
+    "name": "reload creature_template_locale",
+    "security": 3,
+    "syntax": ".reload creature_template_locale",
+    "description": "Reload creature_template_locale table."
+  },
+  {
+    "name": "reload creature_template",
+    "security": 3,
+    "syntax": ".reload creature_template $entry",
+    "description": "Reload the specified creature's template."
+  },
+  {
+    "name": "reload creature_text_locale",
+    "security": 3,
+    "syntax": ".reload creature_text_locale",
+    "description": "Reload creature_text_locale table."
+  },
+  {
+    "name": "reload creature_text",
+    "security": 3,
+    "syntax": ".reload creature_text",
+    "description": "Reload creature_text table."
+  },
+  {
+    "name": "reload disables",
+    "security": 3,
+    "syntax": ".reload disables",
+    "description": "Reload disables table."
+  },
+  {
+    "name": "reload disenchant_loot_template",
+    "security": 3,
+    "syntax": ".reload disenchant_loot_template",
+    "description": "Reload disenchant_loot_template table."
+  },
+  {
+    "name": "reload dungeon_access_requirements",
+    "security": 3,
+    "syntax": ".reload dungeon_access_requirements",
+    "description": "Reload dungeon_access_requirements table."
+  },
+  {
+    "name": "reload dungeon_access_template",
+    "security": 3,
+    "syntax": ".reload dungeon_access_template",
+    "description": "Reload dungeon_access_template table."
+  },
+  {
+    "name": "reload event_scripts",
+    "security": 3,
+    "syntax": ".reload event_scripts",
+    "description": "Reload event_scripts table."
+  },
+  {
+    "name": "reload fishing_loot_template",
+    "security": 3,
+    "syntax": ".reload fishing_loot_template",
+    "description": "Reload fishing_loot_template table."
+  },
+  {
+    "name": "reload game_event_npc_vendor",
+    "security": 3,
+    "syntax": ".reload game_event_npc_vendor",
+    "description": "Reload game_event_npc_vendor table."
+  },
+  {
+    "name": "reload game_graveyard",
+    "security": 3,
+    "syntax": ".reload game_graveyard",
+    "description": "Reload game_graveyard table."
+  },
+  {
+    "name": "reload game_tele",
+    "security": 3,
+    "syntax": ".reload game_tele",
+    "description": "Reload game_tele table."
+  },
+  {
+    "name": "reload gameobject_loot_template",
+    "security": 3,
+    "syntax": ".reload gameobject_loot_template",
+    "description": "Reload gameobject_loot_template table."
+  },
+  {
+    "name": "reload gameobject_questender",
+    "security": 3,
+    "syntax": ".reload gameobject_questender",
+    "description": "Reload gameobject_questender table."
+  },
+  {
+    "name": "reload gameobject_queststarter",
+    "security": 3,
+    "syntax": ".reload gameobject_queststarter",
+    "description": "Reload gameobject_queststarter table."
+  },
+  {
+    "name": "reload gameobject_template_locale",
+    "security": 3,
+    "syntax": ".reload gameobject_template_locale",
+    "description": "Reload gameobject_template_locale table."
+  },
+  {
+    "name": "reload gm_tickets",
+    "security": 3,
+    "syntax": ".reload gm_tickets",
+    "description": "Reload gm_tickets table."
+  },
+  {
+    "name": "reload gossip_menu_option_locale",
+    "security": 3,
+    "syntax": ".reload gossip_menu_option_locale",
+    "description": "Reload gossip_menu_option_locale table."
+  },
+  {
+    "name": "reload gossip_menu_option",
+    "security": 3,
+    "syntax": ".reload gossip_menu_option",
+    "description": "Reload gossip_menu_option table."
+  },
+  {
+    "name": "reload gossip_menu",
+    "security": 3,
+    "syntax": ".reload gossip_menu",
+    "description": "Reload gossip_menu table."
+  },
+  {
+    "name": "reload graveyard_zone",
+    "security": 3,
+    "syntax": ".reload graveyard_zone",
+    "description": "Reload graveyard_zone table."
+  },
+  {
+    "name": "reload item_enchantment_template",
+    "security": 3,
+    "syntax": ".reload item_enchantment_template",
+    "description": "Reload item_enchantment_template table."
+  },
+  {
+    "name": "reload item_loot_template",
+    "security": 3,
+    "syntax": ".reload item_loot_template",
+    "description": "Reload item_loot_template table."
+  },
+  {
+    "name": "reload item_set_name_locale",
+    "security": 3,
+    "syntax": ".reload item_set_name_locale",
+    "description": "Reload item_set_name_locale table."
+  },
+  {
+    "name": "reload item_set_names",
+    "security": 3,
+    "syntax": ".reload item_set_names",
+    "description": "Reload item_set_names table."
+  },
+  {
+    "name": "reload item_template_locale",
+    "security": 3,
+    "syntax": ".reload item_template_locale",
+    "description": "Reload item_template_locale table."
+  },
+  {
+    "name": "reload lfg_dungeon_rewards",
+    "security": 3,
+    "syntax": ".reload lfg_dungeon_rewards",
+    "description": "Reload lfg_dungeon_rewards table."
+  },
+  {
+    "name": "reload mail_level_reward",
+    "security": 3,
+    "syntax": ".reload mail_level_reward",
+    "description": "Reload mail_level_reward table."
+  },
+  {
+    "name": "reload mail_loot_template",
+    "security": 3,
+    "syntax": ".reload quest_mail_loot_template",
+    "description": "Reload quest_mail_loot_template table."
+  },
+  {
+    "name": "reload mail_server_template",
+    "security": 3,
+    "syntax": ".reload mail_server_template",
+    "description": "Reload mail_server_template table."
+  },
+  {
+    "name": "reload milling_loot_template",
+    "security": 3,
+    "syntax": ".reload milling_loot_template",
+    "description": "Reload milling_loot_template table."
+  },
+  {
+    "name": "reload module_string",
+    "security": 3,
+    "syntax": ".reload module_string",
+    "description": "Reload module_string table."
+  },
+  {
+    "name": "reload motd",
+    "security": 3,
+    "syntax": ".reload motd",
+    "description": "Reload motd table."
+  },
+  {
+    "name": "reload npc_spellclick_spells",
+    "security": 3,
+    "syntax": ".reload npc_spellclick_spells",
+    "description": "Reload npc_spellclick_spells table."
+  },
+  {
+    "name": "reload npc_text_locale",
+    "security": 3,
+    "syntax": ".reload npc_text_locale",
+    "description": "Reload npc_text_locale table."
+  },
+  {
+    "name": "reload trainer",
+    "security": 3,
+    "syntax": ".reload trainer",
+    "description": "Reload trainer, trainer_locale, trainer_spell, and creature_default_trainer tables."
+  },
+  {
+    "name": "reload npc_vendor",
+    "security": 3,
+    "syntax": ".reload npc_vendor",
+    "description": "Reload npc_vendor table."
+  },
+  {
+    "name": "reload page_text_locale",
+    "security": 3,
+    "syntax": ".reload page_text_locale",
+    "description": "Reload page_tex_locale table."
+  },
+  {
+    "name": "reload page_text",
+    "security": 3,
+    "syntax": ".reload page_text",
+    "description": "Reload page_text table."
+  },
+  {
+    "name": "reload pickpocketing_loot_template",
+    "security": 3,
+    "syntax": ".reload pickpocketing_loot_template",
+    "description": "Reload pickpocketing_loot_template table."
+  },
+  {
+    "name": "reload player_loot_template",
+    "security": 3,
+    "syntax": ".reload player_loot_template",
+    "description": "Reload player_loot_template table."
+  },
+  {
+    "name": "reload points_of_interest_locale",
+    "security": 3,
+    "syntax": ".reload points_of_interest_locale",
+    "description": "Reload points_of_interest_locale table."
+  },
+  {
+    "name": "reload points_of_interest",
+    "security": 3,
+    "syntax": ".reload points_of_interest",
+    "description": "Reload points_of_interest table."
+  },
+  {
+    "name": "reload profanity_name",
+    "security": 3,
+    "syntax": ".reload profanity_name",
+    "description": "Reload profanity_name table."
+  },
+  {
+    "name": "reload prospecting_loot_template",
+    "security": 3,
+    "syntax": ".reload prospecting_loot_template",
+    "description": "Reload prospecting_loot_template table."
+  },
+  {
+    "name": "reload quest_greeting",
+    "security": 3,
+    "syntax": ".reload quest_greeting",
+    "description": "Reload quest_greeting table."
+  },
+  {
+    "name": "reload quest_offer_reward_locale",
+    "security": 3,
+    "syntax": ".reload quest_offer_reward_locale",
+    "description": "Reload quest_offer_reward_locale table."
+  },
+  {
+    "name": "reload quest_poi",
+    "security": 3,
+    "syntax": ".reload quest_poi",
+    "description": "Reload quest_poi table."
+  },
+  {
+    "name": "reload quest_request_item_locale",
+    "security": 3,
+    "syntax": ".reload quest_request_item_locale",
+    "description": "Reload quest_request_item_locale table."
+  },
+  {
+    "name": "reload quest_template_locale",
+    "security": 3,
+    "syntax": ".reload quest_template_locale",
+    "description": "Reload quest_template_locale table."
+  },
+  {
+    "name": "reload quest_template",
+    "security": 3,
+    "syntax": ".reload quest_template",
+    "description": "Reload quest_template table."
+  },
+  {
+    "name": "reload reference_loot_template",
+    "security": 3,
+    "syntax": ".reload reference_loot_template",
+    "description": "Reload reference_loot_template table."
+  },
+  {
+    "name": "reload reputation_reward_rate",
+    "security": 3,
+    "syntax": ".reload reputation_reward_rate",
+    "description": "Reload reputation_reward_rate table."
+  },
+  {
+    "name": "reload reputation_spillover_template",
+    "security": 3,
+    "syntax": ".reload reputation_spillover_template",
+    "description": "Reload reputation_spillover_template table."
+  },
+  {
+    "name": "reload reserved_name",
+    "security": 3,
+    "syntax": ".reload reserved_name",
+    "description": "Reload reserved_name table."
+  },
+  {
+    "name": "reload skill_discovery_template",
+    "security": 3,
+    "syntax": ".reload skill_discovery_template",
+    "description": "Reload skill_discovery_template table."
+  },
+  {
+    "name": "reload skill_extra_item_template",
+    "security": 3,
+    "syntax": ".reload skill_extra_item_template",
+    "description": "Reload skill_extra_item_template table."
+  },
+  {
+    "name": "reload skill_fishing_base_level",
+    "security": 3,
+    "syntax": ".reload skill_fishing_base_level",
+    "description": "Reload skill_fishing_base_level table."
+  },
+  {
+    "name": "reload skinning_loot_template",
+    "security": 3,
+    "syntax": ".reload skinning_loot_template",
+    "description": "Reload skinning_loot_template table."
+  },
+  {
+    "name": "reload smart_scripts",
+    "security": 3,
+    "syntax": ".reload smart_scripts",
+    "description": "Reload smart_scripts table."
+  },
+  {
+    "name": "reload spawn_group",
+    "security": 3,
+    "syntax": ".reload spawn_group",
+    "description": "Reload the spawn_group_template and spawn_group tables."
+  },
+  {
+    "name": "reload spell_area",
+    "security": 3,
+    "syntax": ".reload spell_area",
+    "description": "Reload spell_area table."
+  },
+  {
+    "name": "reload spell_bonus_data",
+    "security": 3,
+    "syntax": ".reload spell_bonus_data",
+    "description": "Reload spell_bonus_data table."
+  },
+  {
+    "name": "reload spell_group_stack_rules",
+    "security": 3,
+    "syntax": ".reload spell_group",
+    "description": "Reload spell_group_stack_rules table."
+  },
+  {
+    "name": "reload spell_group",
+    "security": 3,
+    "syntax": ".reload spell_group",
+    "description": "Reload spell_group table."
+  },
+  {
+    "name": "reload spell_linked_spell",
+    "security": 3,
+    "syntax": ".reload spell_linked_spell",
+    "description": "Reloads the spell_linked_spell DB table."
+  },
+  {
+    "name": "reload spell_loot_template",
+    "security": 3,
+    "syntax": ".reload spell_loot_template",
+    "description": "Reload spell_loot_template table."
+  },
+  {
+    "name": "reload spell_pet_auras",
+    "security": 3,
+    "syntax": ".reload spell_pet_auras",
+    "description": "Reload spell_pet_auras table."
+  },
+  {
+    "name": "reload spell_proc_event",
+    "security": 3,
+    "syntax": ".reload spell_proc_event",
+    "description": "Reload spell_proc_event table."
+  },
+  {
+    "name": "reload spell_proc",
+    "security": 3,
+    "syntax": ".reload spell_proc",
+    "description": "Reload spell_proc table."
+  },
+  {
+    "name": "reload spell_required",
+    "security": 3,
+    "syntax": ".reload spell_required",
+    "description": "Reload spell_required table."
+  },
+  {
+    "name": "reload spell_scripts",
+    "security": 3,
+    "syntax": ".reload spell_scripts",
+    "description": "Reload spell_scripts table."
+  },
+  {
+    "name": "reload spell_target_position",
+    "security": 3,
+    "syntax": ".reload spell_target_position",
+    "description": "Reload spell_target_position table."
+  },
+  {
+    "name": "reload spell_threats",
+    "security": 3,
+    "syntax": ".reload spell_threats",
+    "description": "Reload spell_threats table."
+  },
+  {
+    "name": "reload vehicle_accessory",
+    "security": 3,
+    "syntax": ".reload vehicle_accessory",
+    "description": "Reloads GUID-based vehicle accessory definitions from the database."
+  },
+  {
+    "name": "reload vehicle_template_accessory",
+    "security": 3,
+    "syntax": ".reload vehicle_template_accessory",
+    "description": "Reloads entry-based vehicle accessory definitions from the database."
+  },
+  {
+    "name": "reload warden_action",
+    "security": 3,
+    "syntax": ".reload warden_action",
+    "description": "Reload warden_action table."
+  },
+  {
+    "name": "reload waypoint_data",
+    "security": 3,
+    "syntax": ".reload waypoint_data",
+    "description": "Will reload waypoint_data table."
+  },
+  {
+    "name": "reload waypoint_scripts",
+    "security": 3,
+    "syntax": ".reload waypoint_scripts",
+    "description": "Reload waypoint_scripts table."
+  },
+  {
+    "name": "reload",
+    "security": 3,
+    "syntax": ".reload $subcommand",
+    "description": "Type .reload to see the list of possible subcommands or .help reload $subcommand to see info on subcommands"
+  },
+  {
+    "name": "reset achievements",
+    "security": 4,
+    "syntax": ".reset achievements [$playername]",
+    "description": "Reset achievements data for selected or named (online or offline) character. Achievements for persistance progress data like completed quests/etc re-filled at reset. Achievements for events like kills/casts/etc will lost."
+  },
+  {
+    "name": "reset all",
+    "security": 4,
+    "syntax": ".reset all [spells/talents]",
+    "description": "Request reset spells or talents (including talents for all character's pets if any) at next login each existed character."
+  },
+  {
+    "name": "reset honor",
+    "security": 3,
+    "syntax": ".reset honor [Playername]",
+    "description": "Reset all honor data for targeted character."
+  },
+  {
+    "name": "reset items",
+    "security": 3,
+    "syntax": ".reset items equipped",
+    "description": "bags"
+  },
+  {
+    "name": "reset items all",
+    "security": 3,
+    "syntax": ".reset items all [$playername]",
+    "description": "Delete all items in the selected player's inventory (equipped, in bags, in bank, in keyring, in currency list and in vendor buy back tab)."
+  },
+  {
+    "name": "reset items allbags",
+    "security": 3,
+    "syntax": ".reset items allbags [$playername]",
+    "description": "Delete all items in the selected player's inventory including the bags themselves."
+  },
+  {
+    "name": "reset items bags",
+    "security": 3,
+    "syntax": ".reset items bags [$playername]",
+    "description": "Delete all items in the selected player's bags."
+  },
+  {
+    "name": "reset items bank",
+    "security": 3,
+    "syntax": ".reset items bank [$playername]",
+    "description": "Delete all items in the selected player's bank."
+  },
+  {
+    "name": "reset items currency",
+    "security": 3,
+    "syntax": ".reset items currency [$playername]",
+    "description": "Delete all items in the selected player's currencies list."
+  },
+  {
+    "name": "reset items equipped",
+    "security": 3,
+    "syntax": ".reset items equipped [$playername]",
+    "description": "Delete all items equipped on the target player."
+  },
+  {
+    "name": "reset items keyring",
+    "security": 3,
+    "syntax": ".reset items keyring [$playername]",
+    "description": "Delete all items in the selected player's keyring."
+  },
+  {
+    "name": "reset items vendor_buyback",
+    "security": 3,
+    "syntax": ".reset items vendor_buyback [$playername]",
+    "description": "Delete all items in the selected player's vendor buyback tab."
+  },
+  {
+    "name": "reset level",
+    "security": 3,
+    "syntax": ".reset level [Playername]",
+    "description": "Reset level to 1 including reset stats and talents. Equipped items with greater level requirement can be lost."
+  },
+  {
+    "name": "reset spells",
+    "security": 3,
+    "syntax": ".reset spells [Playername]",
+    "description": "Removes all non-original spells from spellbook. . Playername can be name of offline character."
+  },
+  {
+    "name": "reset stats",
+    "security": 3,
+    "syntax": ".reset stats [Playername]",
+    "description": "Resets(recalculate) all stats of the targeted player to their original VALUESat current level."
+  },
+  {
+    "name": "reset talents",
+    "security": 3,
+    "syntax": ".reset talents [Playername]",
+    "description": "Removes all talents of the targeted player or pet or named player Playername can be name of offline character. With player talents also will be reset talents for all character's pets if any."
+  },
+  {
+    "name": "reset",
+    "security": 3,
+    "syntax": ".reset $subcommand",
+    "description": "Type .reset to see the list of possible subcommands or .help reset $subcommand to see info on subcommands"
+  },
+  {
+    "name": "respawn",
+    "security": 2,
+    "syntax": ".respawn",
+    "description": "Respawn target creature and GO without waiting for respawn time expiration. If no target provided, respawn all nearest creatures."
+  },
+  {
+    "name": "respawn all",
+    "security": 2,
+    "syntax": ".respawn all",
+    "description": "Respawn all nearest creatures and gameobjects without waiting for respawn time expiration. Also forces respawn of all pending spawn group respawns on the current map."
+  },
+  {
+    "name": "revive",
+    "security": 2,
+    "syntax": ".revive",
+    "description": "Revive the selected player. If no player is selected, it will revive you."
+  },
+  {
+    "name": "save",
+    "security": 0,
+    "syntax": ".save",
+    "description": "Saves your character."
+  },
+  {
+    "name": "saveall",
+    "security": 2,
+    "syntax": ".saveall",
+    "description": "Save all characters in game."
+  },
+  {
+    "name": "send",
+    "security": 2,
+    "syntax": ".send $subcommand",
+    "description": "Type .send to see a list of possible subcommands or .help send $subcommand to see info on the subcommand."
+  },
+  {
+    "name": "send items",
+    "security": 2,
+    "syntax": ".send items #playername \"#subject\" \"#text\" itemid1[:count1] itemid2[:count2] ... itemidN[:countN]",
+    "description": "Send a mail to a player. Subject and mail text must be in \"\". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12."
+  },
+  {
+    "name": "send mail",
+    "security": 2,
+    "syntax": ".send mail #playername \"#subject\" \"#text\"",
+    "description": "Send a mail to a player. Subject and mail text must be in \"\"."
+  },
+  {
+    "name": "send message",
+    "security": 3,
+    "syntax": ".send message $playername $message",
+    "description": "Send screen message to player from ADMINISTRATOR. Will return an error if player is offline (can be problematic with SOAP for example)!"
+  },
+  {
+    "name": "send money",
+    "security": 2,
+    "syntax": ".send money #playername \"#subject\" \"#text\" $money",
+    "description": "Send mail with money to a player. Subject and mail text must be in \"\". Money can be specified as a raw copper amount (e.g.1000) or as a currency string usingg/s/c suffixes for gold/silver/copper (e.g.1g2s3c,5g,50s)."
+  },
+  {
+    "name": "server corpses",
+    "security": 2,
+    "syntax": ".server corpses",
+    "description": "Triggering corpses expire check in world."
+  },
+  {
+    "name": "server debug",
+    "security": 3,
+    "syntax": ".server debug",
+    "description": "Shows detailed information about the server setup, useful when reporting a bug."
+  },
+  {
+    "name": "server exit",
+    "security": 4,
+    "syntax": ".server exit",
+    "description": "Terminate worldserver NOW. Exit code 0."
+  },
+  {
+    "name": "server idlerestart cancel",
+    "security": 3,
+    "syntax": ".server idlerestart cancel",
+    "description": "Cancel the restart/shutdown timer if any."
+  },
+  {
+    "name": "server idlerestart",
+    "security": 4,
+    "syntax": ".server idlerestart #delay [#exit_code]",
+    "description": "Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 2."
+  },
+  {
+    "name": "server idleshutdown cancel",
+    "security": 4,
+    "syntax": ".server idleshutdown cancel",
+    "description": "Cancel the restart/shutdown timer if any."
+  },
+  {
+    "name": "server idleshutdown",
+    "security": 3,
+    "syntax": ".server idleshutdown #delay [#exit_code]",
+    "description": "Shut the server down after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 0."
+  },
+  {
+    "name": "server info",
+    "security": 0,
+    "syntax": ".server info",
+    "description": "Display server version and the number of connected players."
+  },
+  {
+    "name": "server motd",
+    "security": 0,
+    "syntax": ".server motd",
+    "description": "Show server Message of the day."
+  },
+  {
+    "name": "server restart cancel",
+    "security": 3,
+    "syntax": ".server restart cancel",
+    "description": "Cancel the restart/shutdown timer if any."
+  },
+  {
+    "name": "server restart",
+    "security": 3,
+    "syntax": ".server restart #delay [#exit_code]",
+    "description": "Restart the server after #delay seconds. Use #exit_code to change the exit code, default = 2."
+  },
+  {
+    "name": "server set closed",
+    "security": 4,
+    "syntax": ".server set closed [on/off]",
+    "description": "Sets whether the world accepts new client connectsions."
+  },
+  {
+    "name": "server set difftime",
+    "security": 4,
+    "syntax": ".server set difftime $time",
+    "description": "$time (in milliseconds) update time diff is written to the log file."
+  },
+  {
+    "name": "server set loglevel",
+    "security": 4,
+    "syntax": ".server set loglevel $facility $name $loglevel",
+    "description": "$facility can take the values: appender (a) or logger (l). $loglevel can take the values: disabled (0), trace (1), debug (2), info (3), warn (4), error (5) or fatal (6)"
+  },
+  {
+    "name": "server set motd",
+    "security": 3,
+    "syntax": ".server set motd Optional($realmId) $MOTD",
+    "description": "Set server Message of the day for the specified $realmId. If $realmId is not provided it will update for the current realm. Use $realmId -1 to set motd for all realms."
+  },
+  {
+    "name": "server shutdown cancel",
+    "security": 3,
+    "syntax": ".server shutdown cancel",
+    "description": "Cancel the restart/shutdown timer if any."
+  },
+  {
+    "name": "server shutdown",
+    "security": 3,
+    "syntax": ".server shutdown #delay [#exit_code]",
+    "description": "Shut the server down after #delay seconds. Use #exit_code to change the exit code, default = 0."
+  },
+  {
+    "name": "server togglequerylog",
+    "security": 4,
+    "syntax": ".server togglequerylog",
+    "description": "Toggle SQL query log on/off."
+  },
+  {
+    "name": "server",
+    "security": 3,
+    "syntax": ".server $subcommand",
+    "description": "Type .server to see the list of possible subcommands or .help server $subcommand to see info on subcommands"
+  },
+  {
+    "name": "settings",
+    "security": 1,
+    "syntax": ".settings $subcommand",
+    "description": "Type .settings to see the list of all available commands."
+  },
+  {
+    "name": "settings announcer",
+    "security": 1,
+    "syntax": ".settings announcer",
+    "description": "Disables receiving announcements. Valid announcement types are: 'autobroadcast', 'arena', 'bg', 'pvpstart' and 'pvpall'."
+  },
+  {
+    "name": "setskill",
+    "security": 2,
+    "syntax": ".setskill #skill #level [#max]",
+    "description": "Set a skill of id #skill with a current skill value of #level and a maximum value of #max (or equal current maximum if not provide) for the selected character. If no character is selected, you learn the skill."
+  },
+  {
+    "name": "showarea",
+    "security": 2,
+    "syntax": ".showarea #areaid",
+    "description": "Reveal the area of #areaid to the selected character. If no character is selected, reveal this area to you."
+  },
+  {
+    "name": "skirmish",
+    "security": 3,
+    "syntax": ".skirmish [arena] [XvX] [Nick1] [Nick2] ... [NickN]",
+    "description": "[arena] can be \"all\" or comma-separated list of possible arenas (NA,BE,RL,DS,RV). [XvX] can be 1v1, 2v2, 3v3, 5v5. After [XvX] specify enough nicknames for that mode."
+  },
+  {
+    "name": "spect",
+    "security": 0,
+    "syntax": ".spect $subcommand",
+    "description": "Type .spect to see the list of possible subcommands or .help spect $subcommand to see info on subcommands."
+  },
+  {
+    "name": "spect leave",
+    "security": 0,
+    "syntax": ".spect leave",
+    "description": "Leave arena spectator."
+  },
+  {
+    "name": "spect reset",
+    "security": 0,
+    "syntax": ".spect reset",
+    "description": "Reset arena spectator."
+  },
+  {
+    "name": "spect spectate",
+    "security": 0,
+    "syntax": ".spect spectate #playername",
+    "description": "Start arena spectator, watch #playername."
+  },
+  {
+    "name": "spect version",
+    "security": 0,
+    "syntax": ".spect version",
+    "description": "Check spectator addon version."
+  },
+  {
+    "name": "spect watch",
+    "security": 0,
+    "syntax": ".spect watch #playername",
+    "description": "Watch #playername."
+  },
+  {
+    "name": "spellinfo",
+    "security": 2,
+    "syntax": ".spellinfo $subcommand",
+    "description": "Type .spellinfo to see a list of subcommands or .help spellinfo $subcommand to see info on subcommands."
+  },
+  {
+    "name": "spellinfo all",
+    "security": 2,
+    "syntax": ".spellinfo all #spellid",
+    "description": "Displays all available data for spell #spellid including attributes, general properties, effects and targets."
+  },
+  {
+    "name": "spellinfo attributes",
+    "security": 2,
+    "syntax": ".spellinfo attributes #spellid",
+    "description": "Displays basic info and attribute flags for spell #spellid including SpellAttr0-7, custom attributes, stances, dispel type and mechanic."
+  },
+  {
+    "name": "spellinfo effects",
+    "security": 2,
+    "syntax": ".spellinfo effects #spellid",
+    "description": "Displays effect data for spell #spellid including effect type, aura type, base points, multipliers, misc values, mechanic, trigger spell, amplitude and class mask per effect."
+  },
+  {
+    "name": "spellinfo targets",
+    "security": 2,
+    "syntax": ".spellinfo targets #spellid",
+    "description": "Displays target data for spell #spellid including target mask, creature type, max affected targets, and per-effect TargetA, TargetB, radius and chain targets."
+  },
+  {
+    "name": "string",
+    "security": 2,
+    "syntax": ".string #id [#locale]",
+    "description": "Display a server string by its ID and optional locale."
+  },
+  {
+    "name": "summon",
+    "security": 2,
+    "syntax": ".summon [$charactername]",
+    "description": "Teleport the given character to you. Character can be offline."
+  },
+  {
+    "name": "teleport add",
+    "security": 3,
+    "syntax": ".teleport add $name",
+    "description": "Add current your position to .teleport command target locations list with name $name."
+  },
+  {
+    "name": "teleport del",
+    "security": 3,
+    "syntax": ".teleport del $name",
+    "description": "Remove location with name $name for .teleport command locations list."
+  },
+  {
+    "name": "teleport group",
+    "security": 2,
+    "syntax": ".teleport group#location",
+    "description": "Teleport a selected player and his group members to a given location."
+  },
+  {
+    "name": "teleport name",
+    "security": 2,
+    "syntax": ".teleport name [#playername] #location",
+    "description": "Teleport the given character to a given location. Character can be offline. To teleport to homebind, set #location to \"$home\" (without quotes)."
+  },
+  {
+    "name": "teleport name npc guid",
+    "security": 2,
+    "syntax": ".teleport name npc guid $playername #creatureSpawnId",
+    "description": "Teleport the given character to creature with spawn id #creatureSpawnId. Character can be offline."
+  },
+  {
+    "name": "teleport name npc id",
+    "security": 2,
+    "syntax": ".teleport name npc id $playername #creatureId",
+    "description": "Teleport the given character to first found creature with id #creatureId. Character can be offline."
+  },
+  {
+    "name": "teleport name npc name",
+    "security": 2,
+    "syntax": ".teleport name npc name $playername #creatureName",
+    "description": "Teleport the given character to first found creature with name (must match exactly) #creatureName. Character can be offline."
+  },
+  {
+    "name": "teleport",
+    "security": 1,
+    "syntax": ".teleport #location",
+    "description": "Teleport player to a given location."
+  },
+  {
+    "name": "ticket assign",
+    "security": 2,
+    "syntax": ".ticket assign $ticketid $gmname",
+    "description": "Assigns the specified ticket to the specified Game Master."
+  },
+  {
+    "name": "ticket close",
+    "security": 2,
+    "syntax": ".ticket close $ticketid",
+    "description": "Closes the specified ticket. Does not delete permanently."
+  },
+  {
+    "name": "ticket closedlist",
+    "security": 2,
+    "syntax": "",
+    "description": "Displays a list of closed GM tickets."
+  },
+  {
+    "name": "ticket comment",
+    "security": 2,
+    "syntax": ".ticket comment $ticketid $comment",
+    "description": "Allows the adding or modifying of a comment to the specified ticket."
+  },
+  {
+    "name": "ticket complete",
+    "security": 2,
+    "syntax": ".ticket complete #ticketID",
+    "description": "Mark a ticket of the given ID as complete."
+  },
+  {
+    "name": "ticket delete",
+    "security": 3,
+    "syntax": ".ticket delete $ticketid",
+    "description": "Deletes the specified ticket permanently. Ticket must be closed first."
+  },
+  {
+    "name": "ticket escalate",
+    "security": 2,
+    "syntax": ".ticket escalate $ticketid",
+    "description": "Place the specified ticket in the escalation queue."
+  },
+  {
+    "name": "ticket escalatedlist",
+    "security": 2,
+    "syntax": "",
+    "description": "Show all tickets in the escalation queue."
+  },
+  {
+    "name": "ticket list",
+    "security": 2,
+    "syntax": "",
+    "description": "Displays a list of open GM tickets."
+  },
+  {
+    "name": "ticket onlinelist",
+    "security": 2,
+    "syntax": "",
+    "description": "Displays a list of open GM tickets whose owner is online."
+  },
+  {
+    "name": "ticket reset",
+    "security": 2,
+    "syntax": ".ticket reset",
+    "description": "Removes all closed tickets and resets the counter, if no pending open tickets are existing."
+  },
+  {
+    "name": "ticket response",
+    "security": 2,
+    "syntax": ".ticket response $subcommand",
+    "description": "Type .ticket response to see the list of possible subcommands or .help ticket response $subcommand to see info on subcommands."
+  },
+  {
+    "name": "ticket response append",
+    "security": 2,
+    "syntax": ".ticket response append $ticketId $response",
+    "description": "Append response to the specified ticket (without newline)."
+  },
+  {
+    "name": "ticket response appendln",
+    "security": 2,
+    "syntax": ".ticket response appendln $ticketId $response",
+    "description": "Append response to the specified ticket (with newline)."
+  },
+  {
+    "name": "ticket response delete",
+    "security": 2,
+    "syntax": ".ticket response delete $ticketId",
+    "description": "Delete a response from a ticket."
+  },
+  {
+    "name": "ticket response show",
+    "security": 2,
+    "syntax": ".ticket response show $ticketId",
+    "description": "Show a response for a ticket."
+  },
+  {
+    "name": "ticket togglesystem",
+    "security": 4,
+    "syntax": ".ticket togglesystem",
+    "description": "Toggle ticket system on/off."
+  },
+  {
+    "name": "ticket unassign",
+    "security": 2,
+    "syntax": ".ticket unassign $ticketid",
+    "description": "Unassigns the specified ticket from the current assigned Game Master."
+  },
+  {
+    "name": "ticket viewid",
+    "security": 2,
+    "syntax": ".ticket viewid $ticketid",
+    "description": "Returns details about specified ticket. Ticket must be open and not deleted."
+  },
+  {
+    "name": "ticket viewname",
+    "security": 2,
+    "syntax": ".ticket viewname $creatorname",
+    "description": "Returns details about specified ticket. Ticket must be open and not deleted."
+  },
+  {
+    "name": "ticket",
+    "security": 2,
+    "syntax": ".ticket $subcommand",
+    "description": "Type .ticket to see the list of possible subcommands or .help ticket $subcommand to see info on subcommands"
+  },
+  {
+    "name": "titles",
+    "security": 2,
+    "syntax": ".titles $subcommand",
+    "description": "Type .titles to see the list of possible subcommands or .help titles $subcommand to see info on subcommands."
+  },
+  {
+    "name": "titles add",
+    "security": 2,
+    "syntax": ".titles add #title",
+    "description": "Add title #title (id or shift-link) to known titles list for selected player."
+  },
+  {
+    "name": "titles current",
+    "security": 2,
+    "syntax": ".titles current #title",
+    "description": "Set title #title (id or shift-link) as current selected titl for selected player. If title not in known title list for player then it will be added to list."
+  },
+  {
+    "name": "titles remove",
+    "security": 2,
+    "syntax": ".titles remove #title",
+    "description": "Remove title #title (id or shift-link) from known titles list for selected player."
+  },
+  {
+    "name": "titles set",
+    "security": 2,
+    "syntax": ".titles set $subcommand",
+    "description": "Type .titles set to see the list of possible subcommands or .help titles set $subcommand to see info on subcommands."
+  },
+  {
+    "name": "titles set mask",
+    "security": 2,
+    "syntax": ".titles set mask #mask",
+    "description": "Allows user to use all titles from #mask. #mask=0 disables the title-choose-field"
+  },
+  {
+    "name": "unaura",
+    "security": 2,
+    "syntax": ".unaura #spellid",
+    "description": "Remove aura due to spell #spellid from the selected Unit."
+  },
+  {
+    "name": "unban account",
+    "security": 3,
+    "syntax": ".unban account $Name",
+    "description": "Unban accounts for account name pattern."
+  },
+  {
+    "name": "unban character",
+    "security": 3,
+    "syntax": ".unban character $Name",
+    "description": "Unban accounts for character name pattern."
+  },
+  {
+    "name": "unban ip",
+    "security": 3,
+    "syntax": ".unban ip $Ip",
+    "description": "Unban accounts for IP pattern."
+  },
+  {
+    "name": "unban playeraccount",
+    "security": 3,
+    "syntax": ".unban playeraccount $characterName",
+    "description": "Unban the account that owns the character having the designated character name."
+  },
+  {
+    "name": "unban",
+    "security": 3,
+    "syntax": ".unban $subcommand",
+    "description": "Type .unban to see the list of possible subcommands or .help unban $subcommand to see info on subcommands"
+  },
+  {
+    "name": "unbindsight",
+    "security": 3,
+    "syntax": ".unbindsight",
+    "description": "Removes bound vision. Cannot be used while currently possessing a target."
+  },
+  {
+    "name": "unfreeze",
+    "security": 2,
+    "syntax": ".unfreeze (#player)",
+    "description": "\"Unfreezes\" #player and enables his chat again. When using this without #name it will unfreeze your target."
+  },
+  {
+    "name": "unlearn",
+    "security": 2,
+    "syntax": ".unlearn #spell [all]",
+    "description": "Unlearn for selected player a spell #spell. If 'all' provided then all ranks unlearned."
+  },
+  {
+    "name": "unmute",
+    "security": 2,
+    "syntax": ".unmute [$playerName]",
+    "description": "Restore chat messaging for any character from account of character $playerName (or selected). Character can be ofline."
+  },
+  {
+    "name": "unpossess",
+    "security": 2,
+    "syntax": ".unpossess",
+    "description": "If you are possessed, unpossesses yourself; otherwise unpossesses current possessed target."
+  },
+  {
+    "name": "unstuck",
+    "security": 2,
+    "syntax": ".unstuck $playername [inn/graveyard/startzone]",
+    "description": "Teleports specified player to specified location. Default location is player's current hearth location."
+  },
+  {
+    "name": "wchange",
+    "security": 3,
+    "syntax": ".wchange #weathertype #grade",
+    "description": "Set current weather to #weathertype with an intensity of #grade.#weathertype can be 0 for fine, 1 for rain, 2 for snow, 3 for storm, 86 for thunders, 90 for blackrain.#grade is a float value from 0.0 (disabled) to 1.0 (maximum intensity).'"
+  },
+  {
+    "name": "whispers",
+    "security": 1,
+    "syntax": ".whispers on\\off",
+    "description": "Enable/disable accepting whispers by GM from players. By default use worldserver.conf setting."
+  },
+  {
+    "name": "worldstate scourgeinvasion battleswon",
+    "security": 3,
+    "syntax": ".worldstate scourgeinvasion battleswon",
+    "description": "Adjusts the Scourge Invasion battles won count by (can be negative)."
+  },
+  {
+    "name": "worldstate scourgeinvasion show",
+    "security": 3,
+    "syntax": ".worldstate scourgeinvasion show",
+    "description": "Displays the current status of the Scourge Invasion."
+  },
+  {
+    "name": "worldstate scourgeinvasion startzone",
+    "security": 3,
+    "syntax": ".worldstate scourgeinvasion startzone",
+    "description": "Starts a Scourge Invasion event in the zone specified by . Valid zone IDs: 0-7."
+  },
+  {
+    "name": "worldstate scourgeinvasion state",
+    "security": 3,
+    "syntax": ".worldstate scourgeinvasion state",
+    "description": "Sets the Scourge Invasion state. Valid values: 0 = Disabled, 1 = Enabled."
+  },
+  {
+    "name": "worldstate sunsreach counter",
+    "security": 3,
+    "syntax": ".worldstate sunsreach counter",
+    "description": "Sets a Suns Reach worldstate counter and displays current Suns Reach status."
+  },
+  {
+    "name": "worldstate sunsreach gate",
+    "security": 3,
+    "syntax": ".worldstate sunsreach gate",
+    "description": "Sets the phase of Sunwell Plateau Gate. Valid values: 0 = All Gates Closed, 1 = Gate 1 Agamath Open, 2 = Gate 2 Rohendar Open, 3 = Gate 3 Archonisus Open."
+  },
+  {
+    "name": "worldstate sunsreach gatecounter",
+    "security": 3,
+    "syntax": ".worldstate sunsreach gatecounter",
+    "description": "Sets a Sunwell gate progression counter and displays current Suns Reach gate status."
+  },
+  {
+    "name": "worldstate sunsreach phase",
+    "security": 3,
+    "syntax": ".worldstate sunsreach phase",
+    "description": "Sets the phase of Sun's Reach. Valid values: 0 = Staging Area, 1 = Sanctum, 2 = Armory, 3 = Harbor."
+  },
+  {
+    "name": "worldstate sunsreach status",
+    "security": 3,
+    "syntax": ".worldstate sunsreach status",
+    "description": "Displays current Suns Reach and Sunwell gate progression status."
+  },
+  {
+    "name": "worldstate sunsreach subphase",
+    "security": 3,
+    "syntax": ".worldstate sunsreach subphase",
+    "description": "Sets the subphase mask of Sun's Reach. Valid values: 1 = Portal, 2 = Anvil, 4 = Alchemy Lab, 8 = Monument, 15 = All."
+  },
+  {
+    "name": "wp",
+    "security": 3,
+    "syntax": ".wp $subcommand",
+    "description": "Type .wp to see a list of possible subcommands or .help wp $subcommand to see info on the subcommand."
+  },
+  {
+    "name": "wp add",
+    "security": 3,
+    "syntax": ".wp add",
+    "description": "Add a waypoint for the selected creature at your current position."
+  },
+  {
+    "name": "wp event",
+    "security": 3,
+    "syntax": ".wp event $subcommand",
+    "description": "Type .path event to see the list of possible subcommands or .help path event $subcommand to see info on subcommands."
+  },
+  {
+    "name": "wp load",
+    "security": 3,
+    "syntax": ".wp load $pathid",
+    "description": "Load pathid number for selected creature. Creature must have no waypoint data."
+  },
+  {
+    "name": "wp modify",
+    "security": 3,
+    "syntax": ".wp modify $optionOptions:action",
+    "description": "Changes the value actionaction_chance Changes the value action_chancedel Deletes a selected waypointdelay Changes the value delaymove Moves a selected waypointmove_flag Changes the value move_flag"
+  },
+  {
+    "name": "wp reload",
+    "security": 3,
+    "syntax": ".wp reload $pathid",
+    "description": "Load path changes ingame - IMPORTANT: must be applied first for new paths before .wp load #pathid"
+  },
+  {
+    "name": "wp show",
+    "security": 3,
+    "syntax": ".wp show $optionOptions:on $pathid (or selected creature with loaded path)",
+    "description": "Show visual waypoints (Note: You must have GM on to see the waypoints)off Hide the visual waypoints.info Shows info for selected waypoint.first Shows visual the first waypoint.last Shows visual the last waypoint."
+  },
+  {
+    "name": "wp unload",
+    "security": 3,
+    "syntax": ".wp unload",
+    "description": "Unload path for selected creature."
+  },
+  {
+    "name": "wpgps",
+    "security": 4,
+    "syntax": ".wpgps",
+    "description": "Output current position to sql developer log as partial SQL query to be used in pathing"
+  }
+]
